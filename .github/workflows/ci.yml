@@ -6,10 +6,10 @@ on:
   # push: triggered when you push changes to "main"
   # pull_request: triggered when you create or update a "pull request" to branch "main"
   push:
-    branches: [main, feature/labwork2]
+    branches: [main, feature]
 
   pull_request:
-    branches: [main, feature/labwork2]
+    branches: [main, feature]
 
 jobs:
   # Section where all tasks are defined that the workflow must execute
