@@ -1,0 +1,45 @@
+name: CI
+# Set a name for the workflow for tracking with GitHub Actions
+
+on:
+  # Determine the cases that trigger the workflow
+  # push: triggered when you push changes to "main"
+  # pull_request: triggered when you create or update a "pull request" to branch "main"
+  push:
+    branches: [main, feature/labwork2]
+
+  pull_request:
+    branches: [main, feature/labwork2]
+
+jobs:
+  # Section where all tasks are defined that the workflow must execute
+  build-and-test:
+    # - name: (concrete task (job) for building and testing my project)
+    runs-on: ubuntu-latest
+    # Indicate that the job will execute on a virtual machine with the latest version of Ubuntu
+
+    steps:
+      # Define the sequence of actions ("steps") to be performed within this job
+
+      - name: Checkout code
+        # Use GitHub Actions to clone the repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        # Update the package manager and install base tools for compilation and building the project via "make"
+        run: |
+          sudo apt-get update
+          # Flag "-y" = automatic "yes" to every question
+          sudo apt-get install -y build-essential libgtest-dev
+      - name: Build main executable
+        # Start the build with the target "main" in the Makefile
+        run: |
+          make labwork2
+      - name: Build and run tests
+        # Run tests using the "tests" target in the Makefile
+        run: |
+          make tests
+      - name: Clean all
+        # Clean up build artifacts
+        run: |
+          make cleanall
