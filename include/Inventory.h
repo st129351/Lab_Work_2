@@ -25,17 +25,12 @@ public:
 
     std::string show();
 
-    // realisation of template func here
-    template<typename T>
-    void add(std::shared_ptr<T> item);
+    void add(std::shared_ptr<Amulet> item);
 
-    template<typename T>
-    void remove(std::shared_ptr<T> item);
+    void remove(std::shared_ptr<Amulet> item);
 
-    template<typename T>
     void put_on(size_t index);
 
-    template<typename T>
     void take_off(size_t index);
 
 };

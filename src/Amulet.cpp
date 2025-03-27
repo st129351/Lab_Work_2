@@ -1,7 +1,10 @@
 #include "Amulet.h"
+#include "Player.h"
+// full including
 
-Amulet::Amulet(unsigned int cost, bool usage, std::string name, std::string description)
+Amulet::Amulet(unsigned int cost, bool usage, std::string name, std::string description, unsigned int slots)
 {
+    this->slots = slots;
     this->cost = cost;
     this->usage = usage;
     this->name = name;
@@ -16,6 +19,16 @@ unsigned int Amulet::getCost() const
 bool Amulet::getUsage() const
 {
     return usage;
+}
+
+unsigned int Amulet::getSlots() const
+{
+    return slots;
+}
+
+void Amulet::setSlots(unsigned int new_slots)
+{
+    slots = new_slots;
 }
 
 void Amulet::setCost(unsigned int new_cost)
@@ -47,3 +60,4 @@ void Amulet::setDescription(std::string new_description)
 {
     description = new_description;
 }
+

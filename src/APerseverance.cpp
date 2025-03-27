@@ -1,6 +1,7 @@
 #include "APerseverance.h"
+#include "Player.h"
 
-APerseverance::APerseverance() : Amulet(100, false, "perseverance", "If you are on the verge of death, \nyou have a second chance! \nBut don't be intoxicated by this power... \nBecause you have only one usage! \nthen you need to pay 50 gold."), slots(5)
+APerseverance::APerseverance() : Amulet(100, false, "perseverance", "If you are on the verge of death, \nyou have a second chance! \nBut don't be intoxicated by this power... \nBecause you have only one usage! \nthen you need to pay 50 gold.", 5)
 {
     perseverance_description = "If you are on the verge of death, \nyou have a second chance! \nBut don't be intoxicated by this power... \nBecause you have only one usage! \nthen you need to pay 50 gold.";
     additional_health = 100;
@@ -61,11 +62,5 @@ void APerseverance::setWasUsed(bool new_was_used)
 {
     was_used = new_was_used;
 }
-
-unsigned int APerseverance::getSlots() const
-{
-    return slots;
-}
-
 
 

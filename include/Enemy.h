@@ -13,8 +13,10 @@ private:
     unsigned int iq;
     int x_pos;
     int y_pos;
+    unsigned int exp;
+    Player* player; // in constructor take &player (if player was declared as Player player;)
 public:
-    Enemy(std::string name, unsigned int health, unsigned int damage, unsigned int iq);
+    Enemy(std::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int exp, Player* player);
     virtual ~Enemy() = default;
 
     std::string getEnemyDescription() const;
@@ -22,6 +24,13 @@ public:
 
     unsigned int getIQ() const;
     void setIQ(unsigned int new_iq);
+
+    unsigned int getExp() const;
+    void setExp(unsigned int new_exp);
+
+    Player& getPlayer();
+    void setPlayer(Player* new_player); 
+    // ptr, because '&' linked to an item on all life cycle 
 
     virtual void move(Player& player, GameField& field) = 0;
 

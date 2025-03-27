@@ -1,6 +1,8 @@
 #include "AKillerLook.h"
+#include "Player.h"
+#include "Enemy.h"
 
-AKillerLook::AKillerLook(Enemy& e) : Amulet(105, false, "killer look", "Your enemies will tremble at the knees \njust looking at you"), fear_percentage(15), slots(5)
+AKillerLook::AKillerLook(Enemy& e) : Amulet(105, false, "killer look", "Your enemies will tremble at the knees \njust looking at you", 5), fear_percentage(15)
 {
     killer_look_description = "Your enemies will tremble at the knees \njust looking at you";
 }
@@ -30,11 +32,6 @@ void AKillerLook::dont_use(Player& p)
 unsigned int AKillerLook::getFearPercentage() const
 {
     return fear_percentage;
-}
-
-unsigned int AKillerLook::getSlots() const
-{
-    return slots;
 }
 
 std::string AKillerLook::getKillerLookDescription() const

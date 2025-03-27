@@ -1,60 +1,19 @@
-#include "Slime.h"
+#include "Bandit.h"
 #include "Player.h"
 #include "GameField.h"
 
-Slime::Slime(std::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int exp, Player* player, unsigned int poizon_damage) 
-: Enemy(name, health, damage, iq, exp, player)
-{
-    this->poison_damage = 3;
-    this->is_poisoning = false;
-}
+Bandit::Bandit(std::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int exp, Player* player) : Enemy(name, health, damage, iq, exp, player) {}
 
-void Slime::onDeath()
+void Bandit::onDeath()
 {
     Player& curr_player = this->getPlayer();
     unsigned int new_exp = curr_player.getExp() + this->getExp();
     curr_player.setExp(new_exp);
-    std::cout << "Slime is dead 💥" << std::endl;
+    // this->getPlayer().setExp(this->getExp() + this->getPlayer().getExp());
+    std::cout << "Bandit was defeated!" << std::endl;
 }
 
-unsigned int Slime::getPoisonDamage() const
-{
-    return poison_damage;
-}
-
-void Slime::setPoisonDamage(unsigned int new_poison_damage)
-{
-    poison_damage = new_poison_damage;
-}
-
-void Slime::applyPoison(Player& player)
-{
-    if (!is_poisoning)
-    {
-        is_poisoning = true;
-        poison_start = std::chrono::system_clock::now(); // now is poison start
-        player.takeDamage(poison_damage);
-    }
-    else
-    {
-        auto curr_time = std::chrono::system_clock::now();
-        // take duration in the form of std::chrono::duration (cast to seconds)
-        auto elapsed_time = std::chrono::duration_cast<std::chrono::seconds>(curr_time - poison_start);
-        
-        if (elapsed_time < poison_duration)
-        {
-            player.takeDamage(poison_damage);
-        }
-        else
-        {
-            is_poisoning = false;
-        }
-    }
-    
-}
-
-
-void Slime::move(Player& player, GameField& field)
+void Bandit::move(Player& player, GameField& field)
 {
     int player_x = player.getX_pos();
     int player_y = player.getY_pos();
@@ -105,7 +64,7 @@ void Slime::move(Player& player, GameField& field)
             field.setSymbol(this->getX_pos(), this->getY_pos(), ' ');
             this->setX_pos(new_x);
             this->setY_pos(new_y);
-            field.setSymbol(this->getX_pos(), this->getY_pos(), 's');
+            field.setSymbol(this->getX_pos(), this->getY_pos(), 'b');
         }
     }
 }

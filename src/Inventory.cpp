@@ -11,9 +11,9 @@ std::string Inventory::show()
     ss << "Inventory size: " << size << "/" << max_slots << std::endl;
     for (const auto& amulet : amulets)
     {
-        ss << "Amulet: " << amulet->getName() << std::endl;
+        ss << amulet->getName() << std::endl;
         ss << "Description: " << amulet->getDescription() << std::endl;
-        ss << "Cost: " << player.getGold() << "/" << amulet->getCost() << std::endl;
+        // ss << "Cost: " << player.getGold() << "/" << amulet->getCost() << std::endl;
         if (amulet->getUsage() == true)
         {
             ss << "The " << amulet->getName() << " is on" << std::endl;
@@ -27,13 +27,12 @@ std::string Inventory::show()
     return ss.str();
 }
 
-template<typename T>
-void Inventory::add(std::shared_ptr<T> item)
+void Inventory::add(std::shared_ptr<Amulet> item)
 {
-    if (item->size < max_slots)
+    if (size + item->getSlots() < max_slots)
     {
         amulets.push_back(item);
-        size++;
+        size = size + item->getSlots();
     }
 
     if (size == max_slots)
@@ -42,10 +41,9 @@ void Inventory::add(std::shared_ptr<T> item)
     }
 }
 
-template<typename T>
-void Inventory::remove(std::shared_ptr<T> item)
+void Inventory::remove(std::shared_ptr<Amulet> item)
 {
-    for (int i = 0; i < amulets.size(); i++)
+    for (size_t i = 0; i < amulets.size(); i++) // vector.size() usually return "size_t" type
     {
         if (amulets[i] == item)
         {
@@ -55,7 +53,6 @@ void Inventory::remove(std::shared_ptr<T> item)
     }
 }
 
-template<typename T>
 void Inventory::put_on(size_t index)
 {
     if (amulets[index]->getUsage() == true)
@@ -71,7 +68,6 @@ void Inventory::put_on(size_t index)
     }
 }
 
-template<typename T>
 void Inventory::take_off(size_t index)
 {
     if (amulets[index]->getUsage() == false)

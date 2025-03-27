@@ -7,7 +7,6 @@ class AHeal : public Amulet
 {
 private:
     unsigned int heal_value;
-    const unsigned int slots;
     std::string heal_description;
 public:
     AHeal(Player& p);

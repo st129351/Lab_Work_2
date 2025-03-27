@@ -1,6 +1,6 @@
 #include "AFearOfDeath.h"   
 
-AFearOfDeath::AFearOfDeath(Player& p) : Amulet(35, false, "fear of death", "increase damage by 50%"), slots(2)
+AFearOfDeath::AFearOfDeath(Player& p) : Amulet(35, false, "fear of death", "increase damage by 50%", 2)
 {
     additional_damage = p.getDamage() * 0.5;
     fear_of_death_description = "increase damage by 50%";
@@ -28,9 +28,4 @@ unsigned int AFearOfDeath::getAdditionalDamage() const
 void AFearOfDeath::setAdditionalDamage(unsigned int new_additional_damage)
 {
     additional_damage = new_additional_damage;
-}
-
-unsigned int AFearOfDeath::getSlots() const
-{
-    return slots;
 }
