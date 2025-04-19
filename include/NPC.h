@@ -12,6 +12,7 @@ private:
     std::string description;
     int x_pos;
     int y_pos;
+    bool dialogue_complete;
 public:
     NPC(std::string name, std::string description);
     virtual ~NPC() = default;
@@ -20,9 +21,11 @@ public:
 
     std::string getName() const;
     std::string getDescription() const;
+    bool getDialogueComplete() const;
 
     void setName(std::string new_name);
     void setDescription(std::string new_description);
+    void setDialogueComplete(bool new_value);
 
     int getX_pos() const;
     int getY_pos() const;

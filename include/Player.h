@@ -16,6 +16,12 @@ class YardDragon;
 class Slime;
 class Bandit;
 class GameField;
+class AKillerLook;
+class AMadness;
+class APerseverance;
+class BestExp;
+class AHeal;
+class ADash;
 // forward declaration
 
 class Player : public Fighter
@@ -28,10 +34,21 @@ private:
     unsigned int gold;
     int x_pos;
     int y_pos;
+    bool persev_flag;
+    bool best_exp_flag;
+    bool heal_flag;
+    bool dash_flag;
     Inventory inventory;
+    std::vector<std::shared_ptr<Enemy>> enemies;
 
     std::shared_ptr<AFearOfDeath> fear_death;
-
+    std::shared_ptr<AKillerLook> killer_look;
+    std::shared_ptr<AMadness> madness;
+    std::shared_ptr<APerseverance> persev;
+    std::shared_ptr<BestExp> best_exp;
+    std::shared_ptr<AHeal> heal;
+    std::shared_ptr<ADash> dash;
+    
     struct AttackVisual
     {
         int x, y; // where was attack
@@ -46,7 +63,7 @@ public:
 
     std::string showInventory();
 
-    void Buy(std::vector<std::shared_ptr<NPC>> npc_characters, char symb);
+    void Buy(std::vector<std::shared_ptr<NPC>> npc_characters, char symb, GameField& field);
     void NPCSpeak(std::vector<std::shared_ptr<NPC>> npc_characters);
     void attackArea(GameField& field, std::vector<std::shared_ptr<Enemy>>& enemies);
     void UpdateAttackVisual(GameField& field, std::vector<std::shared_ptr<Enemy>>& enemies);
@@ -59,6 +76,14 @@ public:
     std::string getName() const;
     int getX_pos() const;
     int getY_pos() const;
+    bool getPersevFlag() const;
+    bool getBestExpFlag() const;
+    bool getHealFlag() const;
+    bool getDashFlag() const;
+    std::shared_ptr<APerseverance> getPersev();
+    std::shared_ptr<BestExp> getBestExp();
+    std::shared_ptr<AHeal> getHeal();
+    std::shared_ptr<ADash> getDash();
     // setters
     void setExp(unsigned int new_exp);
     void setGold(unsigned int new_gold);

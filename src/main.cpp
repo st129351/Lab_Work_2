@@ -9,7 +9,13 @@ int main()
 	Player p;
 
 	Game game(p);
-	game.start_game();
+	game.Level_1();
+	if (!p.isAlive()) return 0;
+	game.startVillage();
+	if (!p.isAlive()) return 0;
+	game.Level_2();
+	if (!p.isAlive()) return 0;
+	game.Level_3();
 	
 	return 0;
 }

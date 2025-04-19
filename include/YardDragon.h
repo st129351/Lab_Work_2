@@ -14,7 +14,8 @@ class YardDragon : public Enemy
 {
 private:
     int attack_range;
-
+    bool can_move;
+    int fire_count; // update in general game circle
     struct FireVisual
     {
         int x, y;
@@ -31,6 +32,10 @@ public:
 
     unsigned int getAttackRange() const;
     void setAttackRange(int new_range);
+    int getFireCount() const;
+    void setFireCount(int new_value);
+    bool getCanMove() const;
+    void setCanMove(bool new_value);
 
     void move(Player& player, GameField& field) override;
 };

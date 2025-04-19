@@ -16,7 +16,6 @@ public:
     ~AMadness() override;
 
     void use(Player& p) override;
-    void dont_use(Player& p) override;
 
     unsigned int getAdditionalDamage() const;
     void setAdditionalDamage(unsigned int new_additional_damage);

@@ -8,24 +8,44 @@
 #include "NPC.h"
 #include "AFearOfDeath.h"
 #include "Amulet.h"
+#include "AKillerLook.h"
+#include "AMadness.h"
+#include "APerseverance.h"
+#include "BestExp.h"
+#include "AHeal.h"
+#include "ADash.h"
 
 Player::Player(): Fighter("", 100, 10), max_level(3), inventory(*this)
 {
-    this->fear_death = std::make_shared<AFearOfDeath> (*this);
     this->level = 1;
     this->exp = 0;
-    this->gold = 0;
+    this->gold = 100;
     this->x_pos = 14;  // начальная позиция x
     this->y_pos = 13;   // начальная позиция y (центр по вертикали)
+    std::cout << "\033[2J\033[1;1H";
     std::cout << "Enter the name of your hero: ";
-    std::cin >> name;
+    std::cin.ignore(); // clear buffer, if \n
+    std::getline(std::cin, name);
     setName(name);
+    persev_flag = false;
+    best_exp_flag = false;
+    heal_flag = false;
+    dash_flag = false;
+
+    killer_look = nullptr;
+    fear_death = nullptr;
+    madness = nullptr;
+    persev = nullptr;
+    best_exp = nullptr;
+    heal = nullptr;
+    dash = nullptr;
 }
 
 void Player::onDeath()
 {
     unsigned int new_health = 0;
     setHealth(new_health);
+    std::cout << "\033[2J\033[1;1H";
     std::cout << "Game over! You are dead 💀" << std::endl;
 }
 
@@ -37,10 +57,10 @@ void Player::levelUp()
         setExp(0);
         setGold(getGold() + level * 10);
 
-        unsigned int new_damage = getDamage() + 10;
+        unsigned int new_damage = getDamage() + 4;
         setDamage(new_damage);
 
-        unsigned int new_health = getHealth() + 15;
+        unsigned int new_health = getHealth() + 8;
         setHealth(new_health);
 
         std::cout << "You are level up! 🔥" << std::endl;
@@ -54,6 +74,46 @@ std::string Player::showInventory()
 }
 
 // getters 
+bool Player::getPersevFlag() const
+{
+    return persev_flag;
+}
+
+bool Player::getBestExpFlag() const
+{
+    return best_exp_flag;
+}
+
+bool Player::getHealFlag() const
+{
+    return heal_flag;
+}
+
+bool Player::getDashFlag() const
+{
+    return dash_flag;
+}
+
+std::shared_ptr<APerseverance> Player::getPersev()
+{
+    return persev;
+}
+
+std::shared_ptr<BestExp> Player::getBestExp()
+{
+    return best_exp;
+}
+
+std::shared_ptr<AHeal> Player::getHeal() 
+{
+    return heal;
+}
+
+std::shared_ptr<ADash> Player::getDash()
+{
+    return dash;
+}
+
 unsigned int Player::getExp() const
 {
     return exp;
@@ -215,11 +275,12 @@ void Player::NPCSpeak(std::vector<std::shared_ptr<NPC>> npc_characters)
     }
 }
 
-void Player::Buy(std::vector<std::shared_ptr<NPC>> npc_characters, char symb)
+void Player::Buy(std::vector<std::shared_ptr<NPC>> npc_characters, char symb, GameField& field)
 {
     int num = symb - '0'; // symb to number by ASCII (0 has code 48, able to converct symb 1-9 to number)
-    if (num > 8) // only 8 amulets
+    if (num > 7) // only 6 amulets
     {
+        std::cout << "incorrect index of amulet!" << std::endl;
         return;
     }
     for (int ax = -1; ax < 2; ax++)
@@ -234,12 +295,15 @@ void Player::Buy(std::vector<std::shared_ptr<NPC>> npc_characters, char symb)
             {
                 if (npc->getX_pos() == posX && npc->getY_pos() == posY)
                 {
-                    if (num == 1)
+                    if (num == 1 && fear_death == nullptr)
                     {
+                        fear_death = std::make_shared<AFearOfDeath> (*this);
                         if (fear_death->getCost() <= getGold())
                         {
                             int new_gold = getGold() - fear_death->getCost();
                             setGold(new_gold);
+                            fear_death->use(*this);
+                            fear_death->setUsage(true);
                             std::shared_ptr<Amulet> amulet = fear_death;
                             inventory.add(amulet);
                         }
@@ -248,8 +312,147 @@ void Player::Buy(std::vector<std::shared_ptr<NPC>> npc_characters, char symb)
                             std::cout << "insufficient funds :(";
                         }
                     }
+                    else if (num == 1 && fear_death != nullptr)
+                    {
+                        std::cout << "This amulet is already on!" << std::endl;
+                    }
+
+                    if (num == 2 && killer_look == nullptr)
+                    {
+                        enemies = field.getEnemies();
+                        killer_look = std::make_shared<AKillerLook> (enemies);
+
+                        if (killer_look->getCost() <= getGold())
+                        {
+                            int new_gold = getGold() - killer_look->getCost();
+                            setGold(new_gold);
+                            killer_look->use(*this);
+                            killer_look->setUsage(true);
+                            std::shared_ptr<Amulet> amulet = killer_look;
+                            inventory.add(amulet);
+                        }
+                        else
+                        {
+                            std::cout << "insufficient funds :(";
+                        }
+                    }
+                    else if (num == 2 && killer_look != nullptr)
+                    {
+                        std::cout << "This amulet is already on!" << std::endl;
+                    }
+
+                    if (num == 3 && madness == nullptr)
+                    {
+                        madness = std::make_shared<AMadness> (*this);
+                        if (madness->getCost() <= getGold())
+                        {
+                            int new_gold = getGold() - madness->getCost();
+                            setGold(new_gold);
+                            madness->use(*this);
+                            madness->setUsage(true);
+                            std::shared_ptr<Amulet> amulet = madness;
+                            inventory.add(amulet);                        }
+                        else
+                        {
+                            std::cout << "insufficient funds :(";
+                        }
+                    }
+                    else if (num == 3 && madness != nullptr)
+                    {
+                        std::cout << "This amulet is already on!" << std::endl;
+                    }
+
+                    if (num == 4 && persev == nullptr)
+                    {
+                        persev = std::make_shared<APerseverance> ();
+                        if (persev->getCost() <= getGold())
+                        {
+                            int new_gold = getGold() - persev->getCost();
+                            setGold(new_gold);
+                            // persev->use(*this);
+                            persev->setUsage(true);
+                            persev_flag = true;
+                            std::shared_ptr<Amulet> amulet = persev;
+                            inventory.add(amulet);                        
+                        }
+                        else
+                        {
+                            std::cout << "insufficient funds :(";
+                        }
+                    }
+                    else if (num == 4 && persev != nullptr)
+                    {
+                        std::cout << "This amulet is already on!" << std::endl;
+                    }
+
+                    if (num == 5 && best_exp == nullptr)
+                    {
+                        best_exp = std::make_shared<BestExp> (*this);
+                        if (best_exp->getCost() <= getGold())
+                        {
+                            int new_gold = getGold() - best_exp->getCost();
+                            setGold(new_gold);
+                            best_exp_flag = true;
+                            best_exp->setUsage(true);
+                            std::shared_ptr<Amulet> amulet = best_exp;
+                            inventory.add(amulet);                        
+                        }
+                        else
+                        {
+                            std::cout << "insufficient funds :(";
+                        }
+                    }
+                    else if (num == 5 && best_exp != nullptr)
+                    {
+                        std::cout << "This amulet is already on!" << std::endl;
+                    }
+
+                    if (num == 6 && heal == nullptr)
+                    {
+                        heal = std::make_shared<AHeal> ();
+                        if (heal->getCost() <= getGold())
+                        {
+                            int new_gold = getGold() - heal->getCost();
+                            setGold(new_gold);
+                            heal_flag = true;
+                            heal->setUsage(true);
+                            std::shared_ptr<Amulet> amulet = heal;
+                            inventory.add(amulet);
+                        }
+                        else
+                        {
+                            std::cout << "insufficient funds :(";
+                        }
+                    }
+                    else if (num == 6 && heal != nullptr)
+                    {
+                        std::cout << "This amulet is already on!" << std::endl;
+                    }
+
+                    if (num == 7 && dash == nullptr)
+                    {
+                        dash = std::make_shared<ADash> (field);
+                        if (dash->getCost() <= getGold())
+                        {
+                            int new_gold = getGold() - dash->getCost();
+                            setGold(new_gold);
+                            dash_flag = true;
+                            dash->setUsage(true);
+                            std::shared_ptr<Amulet> amulet = dash;
+                            inventory.add(amulet);                        
+                        }
+                        else
+                        {
+                            std::cout << "insufficient funds :(";
+                        }
+                    }
+                    else if (num == 7 && dash != nullptr)
+                    {
+                        std::cout << "This amulet is already on!" << std::endl;
+                    }
                 }
             }
         }
     }
 }
+

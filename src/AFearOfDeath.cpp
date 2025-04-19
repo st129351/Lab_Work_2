@@ -14,12 +14,6 @@ void AFearOfDeath::use(Player& p)
     p.setDamage(new_damage);
 }
 
-void AFearOfDeath::dont_use(Player& p)
-{
-    unsigned int new_damage = p.getDamage() - additional_damage;
-    p.setDamage(new_damage);
-}
-
 unsigned int AFearOfDeath::getAdditionalDamage() const
 {
     return additional_damage;

@@ -22,7 +22,6 @@ public:
     virtual void use(Player& player) = 0;
     // redefinition in different amulets
     // = 0 - pure virtual func (not realise in base class)
-    virtual void dont_use(Player& player) = 0;
     unsigned int getCost() const;
     bool getUsage() const;
     std::string getName() const;

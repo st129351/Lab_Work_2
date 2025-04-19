@@ -20,7 +20,6 @@ public:
     void setBestExpDescription();
 
     void use(Player& p) override;
-    void dont_use(Player& p) override;
 };
 
 #endif

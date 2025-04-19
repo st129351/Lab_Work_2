@@ -3,7 +3,7 @@
 
 APerseverance::APerseverance() : Amulet(100, false, "perseverance", "If you are on the verge of death, \nyou have a second chance! \nBut don't be intoxicated by this power... \nBecause you have only one usage! \nthen you need to pay 50 gold.", 5)
 {
-    perseverance_description = "If you are on the verge of death, \nyou have a second chance! \nBut don't be intoxicated by this power... \nBecause you have only one usage! \nthen you need to pay 50 gold.";
+    perseverance_description = "If you are on the verge of death, \nyou have a second chance! \nBut don't be intoxicated by this power... \nBecause you have only one usage, before you meet him...";
     additional_health = 100;
     was_used = false;
 }
@@ -14,34 +14,23 @@ void APerseverance::use(Player& p)
 {
     if (getWasUsed() == false)
     {
-        if (0 < p.getHealth() && p.getHealth() <= 20)
-        {
-            unsigned int new_health = additional_health - p.getHealth();
-            p.setHealth(new_health);
-            setWasUsed(true);
-        }
-        if (p.getHealth() <= 0)
+        if (p.getHealth() > 0 && p.getHealth() <= 30)
         {
             unsigned int new_health = additional_health;
             p.setHealth(new_health);
             setWasUsed(true);
         }
     }
-    else
-    {
-        warning();
-    }
+    // else
+    // {
+    //     warning();
+    // }
 }
 
-void APerseverance::warning()
-{
-    std::cout << "Firstly, you need to go to the blacksmith and..." << std::endl;
-}
-
-void APerseverance::dont_use(Player& p)
-{
-    return;
-}
+// void APerseverance::warning()
+// {
+//     std::cout << "Firstly, you need to go to the blacksmith and..." << std::endl;
+// }
 
 unsigned int APerseverance::getAdditionalHealth() const
 {

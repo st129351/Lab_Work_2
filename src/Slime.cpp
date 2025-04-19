@@ -14,6 +14,8 @@ void Slime::onDeath()
     Player& curr_player = this->getPlayer();
     unsigned int new_exp = curr_player.getExp() + this->getExp();
     curr_player.setExp(new_exp);
+    unsigned int new_gold = curr_player.getGold() + this->getExp() * 2;
+    curr_player.setGold(new_gold);
     std::cout << "Slime is dead 💥" << std::endl;
 }
 
@@ -65,7 +67,7 @@ void Slime::move(Player& player, GameField& field)
     int new_x = this->getX_pos();
     int new_y = this->getY_pos();
 
-    if (!field.checkCollision(this->getX_pos(), this->getY_pos()))
+    if (!field.checkCollision(this->getX_pos(), this->getY_pos()) && dist_x <= 6 && dist_y <= 6)
     {
         if (abs(dist_x) > abs(dist_y))
         {
@@ -100,7 +102,7 @@ void Slime::move(Player& player, GameField& field)
                 new_x++;
             }
         }
-        if (field.getSymbol(new_x, new_y) != '#' && field.getSymbol(new_x, new_y) != 's' && field.getSymbol(new_x, new_y) != 'b' && field.getSymbol(new_x, new_y) != 'Y' && field.getSymbol(new_x, new_y) != '@')
+        if (field.getSymbol(new_x, new_y) != '#' && field.getSymbol(new_x, new_y) != 'E' && field.getSymbol(new_x, new_y) != 'T' && field.getSymbol(new_x, new_y) != 's' && field.getSymbol(new_x, new_y) != 'b' && field.getSymbol(new_x, new_y) != 'Y' && field.getSymbol(new_x, new_y) != '@')
         {
             field.setSymbol(this->getX_pos(), this->getY_pos(), ' ');
             this->setX_pos(new_x);

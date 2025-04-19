@@ -18,14 +18,6 @@ void AMadness::use(Player& p)
     p.setHealth(new_health);
 }
 
-void AMadness::dont_use(Player& p)
-{
-    unsigned int new_damage = p.getDamage() - additional_damage;
-    p.setDamage(new_damage);
-    unsigned int new_health = p.getHealth() + side_effect;
-    p.setHealth(new_health);
-}
-
 unsigned int AMadness::getAdditionalDamage() const
 {
     return additional_damage;
