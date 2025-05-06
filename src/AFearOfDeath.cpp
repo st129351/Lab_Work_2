@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "AFearOfDeath.h"   
 
 AFearOfDeath::AFearOfDeath(Player& p) : Amulet(35, false, "fear of death", "increase damage by 50%", 2)
