@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include <cmath>
 #include "AKillerLook.h"
 #include "Player.h"
