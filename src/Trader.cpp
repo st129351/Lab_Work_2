@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "Trader.h"
 #include "Amulet.h"
 #include "AFearOfDeath.h"

@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "Inventory.h"
 #include "Player.h"
 #include "Amulet.h"
@@ -46,4 +49,9 @@ void Inventory::add(std::shared_ptr<Amulet> item)
     {
         std::cout << "Inventory is full" << std::endl;
     }
+}
+
+unsigned int Inventory::getAvailableSlots() const
+{
+    return max_slots - size;
 }

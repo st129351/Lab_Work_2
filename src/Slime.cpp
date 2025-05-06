@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "Slime.h"
 #include "Player.h"
 #include "GameField.h"
@@ -11,12 +14,23 @@ Slime::Slime(std::string name, unsigned int health, unsigned int damage, unsigne
 
 void Slime::onDeath()
 {
+    static bool ODProgress = false;
+    
+    if (ODProgress) {
+        return;
+    }
+    
+    ODProgress = true;
+    
     Player& curr_player = this->getPlayer();
     unsigned int new_exp = curr_player.getExp() + this->getExp();
     curr_player.setExp(new_exp);
     unsigned int new_gold = curr_player.getGold() + this->getExp() * 2;
     curr_player.setGold(new_gold);
+    
     std::cout << "Slime is dead 💥" << std::endl;
+    
+    ODProgress = false;
 }
 
 unsigned int Slime::getPoisonDamage() const

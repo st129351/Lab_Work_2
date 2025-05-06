@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "APerseverance.h"
 #include "Player.h"
 
@@ -21,16 +24,7 @@ void APerseverance::use(Player& p)
             setWasUsed(true);
         }
     }
-    // else
-    // {
-    //     warning();
-    // }
 }
-
-// void APerseverance::warning()
-// {
-//     std::cout << "Firstly, you need to go to the blacksmith and..." << std::endl;
-// }
 
 unsigned int APerseverance::getAdditionalHealth() const
 {

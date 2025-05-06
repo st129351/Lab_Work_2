@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "Bandit.h"
 #include "Player.h"
 #include "GameField.h"
@@ -11,7 +14,7 @@ void Bandit::onDeath()
     curr_player.setExp(new_exp);
     unsigned int new_gold = curr_player.getGold() + this->getExp() * 2;
     curr_player.setGold(new_gold);
-    // this->getPlayer().setExp(this->getExp() + this->getPlayer().getExp());
+    
     std::cout << "Bandit was defeated!" << std::endl;
 }
 

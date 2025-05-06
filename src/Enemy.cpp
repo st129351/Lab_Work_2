@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "Enemy.h"
 #include "GameField.h"
 #include "Player.h"
@@ -7,6 +10,7 @@ Enemy::Enemy(std::string name, unsigned int health, unsigned int damage, unsigne
     this->iq = iq;
     this->exp = exp;
     this->player = player;
+    this->enemy_description = "Enemy";
 }
 
 std::string Enemy::getEnemyDescription() const
