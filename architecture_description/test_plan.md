@@ -2,7 +2,7 @@
 
 ## Testing of basic functionality
 
-### Key verification:
+### Standart verification:
 - [ ] Checking the player's movement system
   - WASD control
 - Collision detection
@@ -12,8 +12,7 @@
   - Health Management
 - Gaining experience
 - Inventory system check [ ]
-- Amulet storage
-- Item usage
+- Amulet storages and using
 - Capacity restrictions
 - Correct operation of conversations with NPCs
 
