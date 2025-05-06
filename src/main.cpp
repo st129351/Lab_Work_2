@@ -3,10 +3,15 @@
 //LabWork2
 
 #include "Game.h"
+#include "string"
 
 int main()
 {
-	Player p;
+	std::string name;
+	std::cout << "Enter the name of your hero: ";
+    // std::cin.ignore(); // clear buffer, if \n
+    std::getline(std::cin, name);
+	Player p(name);
 
 	Game game(p);
 	game.Level_1();
