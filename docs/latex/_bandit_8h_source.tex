@@ -1,0 +1,31 @@
+\doxysection{Bandit.\+h}
+\hypertarget{_bandit_8h_source}{}\label{_bandit_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/Bandit.h@{/Users/daniillickovaha/Documents/MyGame/include/Bandit.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//Lichkovaha\ Daniil}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//st129351@student.spbu.ru}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//LabWork2}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ BANDIT\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ BANDIT\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_field}{GameField}};}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ forwad\ declaration}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bandit_a7a73c6082ffb4d3f4b4f894ed83b0737}{Bandit}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_enemy_a8696e0ba679ea389fb52697446ae469f}{Enemy}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00022\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_bandit_a7a73c6082ffb4d3f4b4f894ed83b0737}{Bandit}}(std::string\ name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ health,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ damage,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iq,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ exp,\ \mbox{\hyperlink{class_player}{Player}}*\ player);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_bandit_aaad3097a808304c98e47fae10a27b926}{\string~Bandit}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bandit_a807111abe0de10ccf2513e8e4f1e88e2}{onDeath}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bandit_aaf00cebfe3798a37a01996ad9ed589c9}{move}}(\mbox{\hyperlink{class_player}{Player}}\&\ player,\ \mbox{\hyperlink{class_game_field}{GameField}}\&\ field)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

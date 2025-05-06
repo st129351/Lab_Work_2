@@ -1,0 +1,100 @@
+\doxysection{Inventory Class Reference}
+\hypertarget{class_inventory}{}\label{class_inventory}\index{Inventory@{Inventory}}
+
+
+Represents the player\textquotesingle{}s inventory in the game.  
+
+
+
+
+{\ttfamily \#include $<$Inventory.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_inventory_a694f2fbbcb65c3b17e75b487eb45ba7c}{Inventory}} (\mbox{\hyperlink{class_player}{Player}} \&p)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_inventory}{Inventory} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_inventory_a932d6d5bbfe7a1674c150864790e4c34}{show}} ()
+\begin{DoxyCompactList}\small\item\em Shows the contents of the inventory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_inventory_af14efb782bdfbe40b027cd78afa46b61}{add}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_amulet}{Amulet}} $>$ item)
+\begin{DoxyCompactList}\small\item\em Adds an item to the inventory. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_inventory_aa793c3a7dcb824a0d2aabe4706deb041}{get\+Available\+Slots}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of available slots in the inventory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the player\textquotesingle{}s inventory in the game. 
+
+The inventory manages a collection of items, specifically Amulets in this case. It has a limited number of slots and provides functionality to add, show, and manage items. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_inventory_a694f2fbbcb65c3b17e75b487eb45ba7c}\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\index{Inventory@{Inventory}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{Inventory()}{Inventory()}}
+{\footnotesize\ttfamily \label{class_inventory_a694f2fbbcb65c3b17e75b487eb45ba7c} 
+Inventory\+::\+Inventory (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_inventory}{Inventory} class. 
+
+Initializes an empty inventory for the given player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Reference to the \doxylink{class_player}{Player} object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_inventory_af14efb782bdfbe40b027cd78afa46b61}\index{Inventory@{Inventory}!add@{add}}
+\index{add@{add}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{class_inventory_af14efb782bdfbe40b027cd78afa46b61} 
+void Inventory\+::add (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_amulet}{Amulet}} $>$}]{item}{}\end{DoxyParamCaption})}
+
+
+
+Adds an item to the inventory. 
+
+Adds the given \doxylink{class_amulet}{Amulet} to the inventory if there are enough free slots.
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & Shared pointer to the \doxylink{class_amulet}{Amulet} to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_inventory_aa793c3a7dcb824a0d2aabe4706deb041}\index{Inventory@{Inventory}!getAvailableSlots@{getAvailableSlots}}
+\index{getAvailableSlots@{getAvailableSlots}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{getAvailableSlots()}{getAvailableSlots()}}
+{\footnotesize\ttfamily \label{class_inventory_aa793c3a7dcb824a0d2aabe4706deb041} 
+unsigned int Inventory\+::get\+Available\+Slots (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of available slots in the inventory. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int Number of available slots. 
+\end{DoxyReturn}
+\Hypertarget{class_inventory_a932d6d5bbfe7a1674c150864790e4c34}\index{Inventory@{Inventory}!show@{show}}
+\index{show@{show}!Inventory@{Inventory}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \label{class_inventory_a932d6d5bbfe7a1674c150864790e4c34} 
+std\+::string Inventory\+::show (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Shows the contents of the inventory. 
+
+Generates a string representation of the inventory, including the size and list of items.
+
+\begin{DoxyReturn}{Returns}
+std\+::string String representation of the inventory. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniillickovaha/\+Documents/\+My\+Game/include/Inventory.\+h\end{DoxyCompactItemize}

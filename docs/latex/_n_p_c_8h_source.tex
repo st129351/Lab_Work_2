@@ -1,0 +1,54 @@
+\doxysection{NPC.\+h}
+\hypertarget{_n_p_c_8h_source}{}\label{_n_p_c_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/NPC.h@{/Users/daniillickovaha/Documents/MyGame/include/NPC.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//Lichkovaha\ Daniil}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//st129351@student.spbu.ru}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//LabWork2}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ NPC\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ NPC\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_n_p_c_a4d706b0719033eb7acd179a7d09a4c4b}{NPC}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ std::string\ name;\ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ description;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ x\_pos;\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ y\_pos;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ dialogue\_complete;\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_n_p_c_a4d706b0719033eb7acd179a7d09a4c4b}{NPC}}(std::string\ name,\ std::string\ description);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_n_p_c_a29f99d778a729ff9efcde5dfa6604cae}{\string~NPC}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_p_c_a7436ea19c35f710a33049f48e6537b6f}{speak}}()\ =\ 0;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ std::string\ \mbox{\hyperlink{class_n_p_c_acde128cab912144027191951902e1adc}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ std::string\ \mbox{\hyperlink{class_n_p_c_a7c45f863c3cb2f47d76d6fbf3a8e4f55}{getDescription}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_n_p_c_aeb3f372f9f330ee684d396e3377701dc}{getDialogueComplete}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_p_c_a173b0462695806383e21e14bb4ca4413}{setName}}(std::string\ new\_name);}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_p_c_a53e90cffc327c015d6cb661265d9800a}{setDescription}}(std::string\ new\_description);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_p_c_ab394d9dcce442be67b308de688d6fd97}{setDialogueComplete}}(\textcolor{keywordtype}{bool}\ new\_value);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_n_p_c_ad73dc8dfb4b976286349f80653d2d9d0}{getX\_pos}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_n_p_c_ab36f7434d9b072f6d5fd01289c993360}{getY\_pos}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_p_c_a54ba6c7571043f75dcd0b2cf7f01ba92}{setX\_pos}}(\textcolor{keywordtype}{int}\ new\_pos);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_n_p_c_a074dd55a6248f3a5723a91fffc14398f}{setY\_pos}}(\textcolor{keywordtype}{int}\ new\_pos);}
+\DoxyCodeLine{00123\ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

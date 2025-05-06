@@ -1,0 +1,92 @@
+\doxysection{Game\+Field.\+h}
+\hypertarget{_game_field_8h_source}{}\label{_game_field_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/GameField.h@{/Users/daniillickovaha/Documents/MyGame/include/GameField.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//Lichkovaha\ Daniil}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//st129351@student.spbu.ru}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//LabWork2}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ GAMEFIELD\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ GAMEFIELD\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <cctype>}\ \textcolor{comment}{//\ to\ use\ fast\ checking\ for\ a\ number\ (isdigit)}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_enemy}{Enemy}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_yard_dragon}{YardDragon}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_n_p_c}{NPC}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_elder}{Elder}};}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_trader}{Trader}};}
+\DoxyCodeLine{00017\ \textcolor{comment}{//\ forward\ declaration}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_field_ab3cba84d3ad50508fad6adab6aa699f7}{GameField}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{char}\ field[30][15];\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}\&\ player;\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::shared\_ptr<YardDragon>\&\ dragon;\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<Elder>\ elder;\ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<Trader>\ trader;\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<std::shared\_ptr<NPC>>\ npc\_characters;\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ p\_was\_seen\_d;\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{char}\ input\_symb;\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \ \ \ \ std::vector<std::shared\_ptr<Enemy>>\ \mbox{\hyperlink{class_game_field_abf989ef385f27a18b1f9911339595196}{enemies}};\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{class_game_field_ab3cba84d3ad50508fad6adab6aa699f7}{GameField}}(\mbox{\hyperlink{class_player}{Player}}\&\ p,\ std::shared\_ptr<YardDragon>\&\ d);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{class_game_field_a04b5fcab27b16258195206d0f0b3d876}{\string~GameField}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a0ad673c79121f346a147712cc6211be5}{draw}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_game_field_accc8a84a4c397e139fc87927cd218c0d}{getSymbol}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_ae90caee0e440013cae5142ae86db6cc5}{setSymbol}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{char}\ symbol);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_field_a553a5e0e162c51117662620fb00f327f}{getPWasSeenD}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a08fe176d9eb62220ac8a008c738fddb1}{setPWasSeenD}}(\textcolor{keywordtype}{bool}\ new\_value);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{class_game_field_a89649bab35344e7fa21628838a939040}{getInputSymb}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a74bc7e4a82be2ffcac23db93cbb5eeeb}{setInputSymb}}(\textcolor{keywordtype}{char}\ new\_symb);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \ \ \ \ std::shared\_ptr<Elder>\ \mbox{\hyperlink{class_game_field_abdf655dffd107caa510001cf2d3f2f06}{getElder}}();}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a74cf40ff53346281c11e21f0f7f25168}{playerSpawn}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a54583bb7b440de18442ec5b8cd0fb246}{yardDragonSpawn}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_aa0beca8acb80ab6878d03f79c01d41b9}{elderSpawn}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_ac65b41a2bc03d1c051c004a50e5ef973}{traderSpawn}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \ \ \ \ \mbox{\hyperlink{class_yard_dragon}{YardDragon}}\&\ \mbox{\hyperlink{class_game_field_a9f6f66d37bce047559d997cc1dd88264}{getDragon}}();}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a26e89feb38ef9a67086e544b00f19324}{slimeSpawn}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a58fbaf67ef7374fa22f4830000ca8430}{banditSpawn}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_field_a1f7bfa05927106756ddceda0da6d6b6a}{checkCollision}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_game_field_af2358f3808ea0dd69ebbdffd53d1c6b9}{checkDragonRange}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a4510dca2a479ef791948b82f3aba6939}{combat}}();}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a427d257dee4c998c01338cc949039e1c}{Buy}}(\textcolor{keywordtype}{char}\ symb);}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a5d13806f60b874e5530bdc3cbbba6609}{Movement}}(\textcolor{keywordtype}{char}\ where);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_a848b57771454f4074feca1f9c7db9b4d}{Interaction}}(\textcolor{keywordtype}{char}\ what);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00219\ \ \ \ \ std::vector<std::shared\_ptr<Enemy>>\&\ \mbox{\hyperlink{class_game_field_a4274f9009edf5ba7775f5bdc2e4c0f3a}{getEnemies}}();}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00226\ \ \ \ \ std::vector<std::shared\_ptr<NPC>>\&\ \mbox{\hyperlink{class_game_field_aa3142411d5f868c914ff5a350a63b3ba}{getNPC}}();}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00231\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_field_aba72f153835cbde8f79770d9e3b03546}{moveEnemies}}();}
+\DoxyCodeLine{00232\ \};}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00234\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

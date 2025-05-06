@@ -1,0 +1,61 @@
+\doxysection{Yard\+Dragon.\+h}
+\hypertarget{_yard_dragon_8h_source}{}\label{_yard_dragon_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/YardDragon.h@{/Users/daniillickovaha/Documents/MyGame/include/YardDragon.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//Lichkovaha\ Daniil}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//st129351@student.spbu.ru}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//LabWork2}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ YARDDRAGON\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ YARDDRAGON\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_field}{GameField}};}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ not\ suitable,\ when\ using\ the\ object\ of\ class\ (now\ ptr\ in\ constructor)}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_yard_dragon_af7d1a860fc15ebc2fc19750809724a66}{YardDragon}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_enemy_a8696e0ba679ea389fb52697446ae469f}{Enemy}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ attack\_range;\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ can\_move;\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{int}\ fire\_count;\ }
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{struct\ }FireVisual}
+\DoxyCodeLine{00035\ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;\ }
+\DoxyCodeLine{00037\ \ \ \ \ \};}
+\DoxyCodeLine{00038\ \ \ \ \ std::vector<FireVisual>\ fire\_visuals;\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{class_yard_dragon_af7d1a860fc15ebc2fc19750809724a66}{YardDragon}}(std::string\ name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ health,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ damage,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iq,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ exp,\ \mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{int}\ attack\_range);}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{class_yard_dragon_a7033a0be41fa4ba542d066b752b1c523}{\string~YardDragon}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_yard_dragon_a66f46ee2639a8bb162f751762c5c8c06}{onDeath}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_yard_dragon_a1a9c7061bd91f60b68cac40194a9dfa2}{FireAttack}}(\mbox{\hyperlink{class_game_field}{GameField}}\&\ field,\ \mbox{\hyperlink{class_player}{Player}}\&\ player);}
+\DoxyCodeLine{00077\ \ \ \ \ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_yard_dragon_a60bab6b6c16c68c76540510bcda11139}{UpdateFireVisual}}(\mbox{\hyperlink{class_game_field}{GameField}}\&\ field,\ \mbox{\hyperlink{class_player}{Player}}\&\ player);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_yard_dragon_a8c6c5b827d0bd7fd6bb107774ec64f12}{getAttackRange}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00092\ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_yard_dragon_a58886f2456a09a6be364255998fc4dd6}{setAttackRange}}(\textcolor{keywordtype}{int}\ new\_range);}
+\DoxyCodeLine{00099\ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_yard_dragon_a233df1ff8e34fd8e2c9c2850cfd89bb9}{getFireCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00106\ \ \ \ \ }
+\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_yard_dragon_a732fd4858d7ed3ac37ac1d3ccdafc2ad}{setFireCount}}(\textcolor{keywordtype}{int}\ new\_value);}
+\DoxyCodeLine{00113\ \ \ \ \ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_yard_dragon_ac672726247d0ca0cb7c5884812fb05e1}{getCanMove}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00121\ \ \ \ \ }
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_yard_dragon_a8d11346e6799a6d53d9fd9275f85e397}{setCanMove}}(\textcolor{keywordtype}{bool}\ new\_value);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_yard_dragon_a4ab6767cd63aed1f2f34478596b94924}{move}}(\mbox{\hyperlink{class_player}{Player}}\&\ player,\ \mbox{\hyperlink{class_game_field}{GameField}}\&\ field)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00139\ \};}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

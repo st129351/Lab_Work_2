@@ -1,0 +1,245 @@
+\doxysection{NPC Class Reference}
+\hypertarget{class_n_p_c}{}\label{class_n_p_c}\index{NPC@{NPC}}
+
+
+Base class for all Non-\/\+Player Characters (NPCs).  
+
+
+
+
+{\ttfamily \#include $<$NPC.\+h$>$}
+
+Inheritance diagram for NPC\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_n_p_c}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_n_p_c_a4d706b0719033eb7acd179a7d09a4c4b}{NPC}} (std\+::string name, std\+::string description)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_n_p_c}{NPC} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_n_p_c_a29f99d778a729ff9efcde5dfa6604cae}{\texorpdfstring{$\sim$}{\string~}\+NPC}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_n_p_c}{NPC} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_n_p_c_a7436ea19c35f710a33049f48e6537b6f}{speak}} ()=0
+\begin{DoxyCompactList}\small\item\em Abstract method to initiate dialogue with the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_n_p_c_acde128cab912144027191951902e1adc}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_n_p_c_a7c45f863c3cb2f47d76d6fbf3a8e4f55}{get\+Description}} () const
+\begin{DoxyCompactList}\small\item\em Gets the description of the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_n_p_c_aeb3f372f9f330ee684d396e3377701dc}{get\+Dialogue\+Complete}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the dialogue with the \doxylink{class_n_p_c}{NPC} is complete. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_a173b0462695806383e21e14bb4ca4413}{set\+Name}} (std\+::string new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets a new name for the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_a53e90cffc327c015d6cb661265d9800a}{set\+Description}} (std\+::string new\+\_\+description)
+\begin{DoxyCompactList}\small\item\em Sets a new description for the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_ab394d9dcce442be67b308de688d6fd97}{set\+Dialogue\+Complete}} (bool new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the dialogue completion status of the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_n_p_c_ad73dc8dfb4b976286349f80653d2d9d0}{get\+X\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Gets the X-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_n_p_c_ab36f7434d9b072f6d5fd01289c993360}{get\+Y\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Y-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_a54ba6c7571043f75dcd0b2cf7f01ba92}{set\+X\+\_\+pos}} (int new\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Sets the X-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_a074dd55a6248f3a5723a91fffc14398f}{set\+Y\+\_\+pos}} (int new\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Sets the Y-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all Non-\/\+Player Characters (NPCs). 
+
+This class provides a common structure and functionality for NPCs, including name, description, position on the map, and dialogue state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_n_p_c_a4d706b0719033eb7acd179a7d09a4c4b}\index{NPC@{NPC}!NPC@{NPC}}
+\index{NPC@{NPC}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{NPC()}{NPC()}}
+{\footnotesize\ttfamily \label{class_n_p_c_a4d706b0719033eb7acd179a7d09a4c4b} 
+NPC\+::\+NPC (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{, }\item[{std\+::string}]{description}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_n_p_c}{NPC} class. 
+
+Initializes a new \doxylink{class_n_p_c}{NPC} object with the given name and description. The dialogue is initially set to incomplete.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the \doxylink{class_n_p_c}{NPC}. \\
+\hline
+{\em description} & The description of the \doxylink{class_n_p_c}{NPC}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_n_p_c_a29f99d778a729ff9efcde5dfa6604cae}\index{NPC@{NPC}!````~NPC@{\texorpdfstring{$\sim$}{\string~}NPC}}
+\index{````~NPC@{\texorpdfstring{$\sim$}{\string~}NPC}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}NPC()}{\string~NPC()}}
+{\footnotesize\ttfamily \label{class_n_p_c_a29f99d778a729ff9efcde5dfa6604cae} 
+virtual NPC\+::\texorpdfstring{$\sim$}{\string~}\+NPC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for the \doxylink{class_n_p_c}{NPC} class. 
+
+Ensures proper cleanup of \doxylink{class_n_p_c}{NPC} objects and their derived classes. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_n_p_c_a7c45f863c3cb2f47d76d6fbf3a8e4f55}\index{NPC@{NPC}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily \label{class_n_p_c_a7c45f863c3cb2f47d76d6fbf3a8e4f55} 
+std\+::string NPC\+::get\+Description (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the description of the \doxylink{class_n_p_c}{NPC}. 
+
+\begin{DoxyReturn}{Returns}
+The description of the \doxylink{class_n_p_c}{NPC}. 
+\end{DoxyReturn}
+\Hypertarget{class_n_p_c_aeb3f372f9f330ee684d396e3377701dc}\index{NPC@{NPC}!getDialogueComplete@{getDialogueComplete}}
+\index{getDialogueComplete@{getDialogueComplete}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{getDialogueComplete()}{getDialogueComplete()}}
+{\footnotesize\ttfamily \label{class_n_p_c_aeb3f372f9f330ee684d396e3377701dc} 
+bool NPC\+::get\+Dialogue\+Complete (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the dialogue with the \doxylink{class_n_p_c}{NPC} is complete. 
+
+\begin{DoxyReturn}{Returns}
+true if the dialogue is complete, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_n_p_c_acde128cab912144027191951902e1adc}\index{NPC@{NPC}!getName@{getName}}
+\index{getName@{getName}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_n_p_c_acde128cab912144027191951902e1adc} 
+std\+::string NPC\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the \doxylink{class_n_p_c}{NPC}. 
+
+\begin{DoxyReturn}{Returns}
+The name of the \doxylink{class_n_p_c}{NPC}. 
+\end{DoxyReturn}
+\Hypertarget{class_n_p_c_ad73dc8dfb4b976286349f80653d2d9d0}\index{NPC@{NPC}!getX\_pos@{getX\_pos}}
+\index{getX\_pos@{getX\_pos}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{getX\_pos()}{getX\_pos()}}
+{\footnotesize\ttfamily \label{class_n_p_c_ad73dc8dfb4b976286349f80653d2d9d0} 
+int NPC\+::get\+X\+\_\+pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the X-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. 
+
+\begin{DoxyReturn}{Returns}
+The X-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. 
+\end{DoxyReturn}
+\Hypertarget{class_n_p_c_ab36f7434d9b072f6d5fd01289c993360}\index{NPC@{NPC}!getY\_pos@{getY\_pos}}
+\index{getY\_pos@{getY\_pos}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{getY\_pos()}{getY\_pos()}}
+{\footnotesize\ttfamily \label{class_n_p_c_ab36f7434d9b072f6d5fd01289c993360} 
+int NPC\+::get\+Y\+\_\+pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the Y-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. 
+
+\begin{DoxyReturn}{Returns}
+The Y-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. 
+\end{DoxyReturn}
+\Hypertarget{class_n_p_c_a53e90cffc327c015d6cb661265d9800a}\index{NPC@{NPC}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily \label{class_n_p_c_a53e90cffc327c015d6cb661265d9800a} 
+void NPC\+::set\+Description (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+\_\+description}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new description for the \doxylink{class_n_p_c}{NPC}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+description} & The new description of the \doxylink{class_n_p_c}{NPC}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_n_p_c_ab394d9dcce442be67b308de688d6fd97}\index{NPC@{NPC}!setDialogueComplete@{setDialogueComplete}}
+\index{setDialogueComplete@{setDialogueComplete}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{setDialogueComplete()}{setDialogueComplete()}}
+{\footnotesize\ttfamily \label{class_n_p_c_ab394d9dcce442be67b308de688d6fd97} 
+void NPC\+::set\+Dialogue\+Complete (\begin{DoxyParamCaption}\item[{bool}]{new\+\_\+value}{}\end{DoxyParamCaption})}
+
+
+
+Sets the dialogue completion status of the \doxylink{class_n_p_c}{NPC}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new value for the dialogue completion flag. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_n_p_c_a173b0462695806383e21e14bb4ca4413}\index{NPC@{NPC}!setName@{setName}}
+\index{setName@{setName}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_n_p_c_a173b0462695806383e21e14bb4ca4413} 
+void NPC\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new name for the \doxylink{class_n_p_c}{NPC}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+name} & The new name of the \doxylink{class_n_p_c}{NPC}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_n_p_c_a54ba6c7571043f75dcd0b2cf7f01ba92}\index{NPC@{NPC}!setX\_pos@{setX\_pos}}
+\index{setX\_pos@{setX\_pos}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{setX\_pos()}{setX\_pos()}}
+{\footnotesize\ttfamily \label{class_n_p_c_a54ba6c7571043f75dcd0b2cf7f01ba92} 
+void NPC\+::set\+X\+\_\+pos (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+pos}{}\end{DoxyParamCaption})}
+
+
+
+Sets the X-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+pos} & The new X-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_n_p_c_a074dd55a6248f3a5723a91fffc14398f}\index{NPC@{NPC}!setY\_pos@{setY\_pos}}
+\index{setY\_pos@{setY\_pos}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{setY\_pos()}{setY\_pos()}}
+{\footnotesize\ttfamily \label{class_n_p_c_a074dd55a6248f3a5723a91fffc14398f} 
+void NPC\+::set\+Y\+\_\+pos (\begin{DoxyParamCaption}\item[{int}]{new\+\_\+pos}{}\end{DoxyParamCaption})}
+
+
+
+Sets the Y-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+pos} & The new Y-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_n_p_c_a7436ea19c35f710a33049f48e6537b6f}\index{NPC@{NPC}!speak@{speak}}
+\index{speak@{speak}!NPC@{NPC}}
+\doxysubsubsection{\texorpdfstring{speak()}{speak()}}
+{\footnotesize\ttfamily \label{class_n_p_c_a7436ea19c35f710a33049f48e6537b6f} 
+virtual void NPC\+::speak (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Abstract method to initiate dialogue with the \doxylink{class_n_p_c}{NPC}. 
+
+Must be overridden in derived classes to implement specific dialogue behavior. 
+
+Implemented in \mbox{\hyperlink{class_elder_a21b5f359399fa578ce926456b5d99066}{Elder}}, and \mbox{\hyperlink{class_trader_ac513e1eb53bf02d8b48b59d20950cb51}{Trader}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniillickovaha/\+Documents/\+My\+Game/include/NPC.\+h\end{DoxyCompactItemize}

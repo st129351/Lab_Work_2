@@ -1,0 +1,454 @@
+\doxysection{Game\+Field Class Reference}
+\hypertarget{class_game_field}{}\label{class_game_field}\index{GameField@{GameField}}
+
+
+Represents the game field.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Field.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_field_ab3cba84d3ad50508fad6adab6aa699f7}{Game\+Field}} (\mbox{\hyperlink{class_player}{Player}} \&p, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_yard_dragon}{Yard\+Dragon}} $>$ \&d)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_game_field}{Game\+Field} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_field_a04b5fcab27b16258195206d0f0b3d876}\label{class_game_field_a04b5fcab27b16258195206d0f0b3d876} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Game\+Field} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_game_field}{Game\+Field} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a0ad673c79121f346a147712cc6211be5}{draw}} () const
+\begin{DoxyCompactList}\small\item\em Draws the game field. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_game_field_accc8a84a4c397e139fc87927cd218c0d}{get\+Symbol}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Gets the symbol at the specified coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_ae90caee0e440013cae5142ae86db6cc5}{set\+Symbol}} (int x, int y, char symbol)
+\begin{DoxyCompactList}\small\item\em Sets the symbol at the specified coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_field_a553a5e0e162c51117662620fb00f327f}{get\+PWas\+SeenD}} () const
+\begin{DoxyCompactList}\small\item\em Gets the flag indicating if the player was seen by the dragon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a08fe176d9eb62220ac8a008c738fddb1}{set\+PWas\+SeenD}} (bool new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the flag indicating if the player was seen by the dragon. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_game_field_a89649bab35344e7fa21628838a939040}{get\+Input\+Symb}} () const
+\begin{DoxyCompactList}\small\item\em Gets the last input symbol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a74bc7e4a82be2ffcac23db93cbb5eeeb}{set\+Input\+Symb}} (char new\+\_\+symb)
+\begin{DoxyCompactList}\small\item\em Sets the last input symbol. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_elder}{Elder}} $>$ \mbox{\hyperlink{class_game_field_abdf655dffd107caa510001cf2d3f2f06}{get\+Elder}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \doxylink{class_elder}{Elder} \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a74cf40ff53346281c11e21f0f7f25168}{player\+Spawn}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Spawns the player at the specified coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a54583bb7b440de18442ec5b8cd0fb246}{yard\+Dragon\+Spawn}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Spawns the \doxylink{class_yard_dragon}{Yard\+Dragon} at the specified coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_aa0beca8acb80ab6878d03f79c01d41b9}{elder\+Spawn}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Spawns the \doxylink{class_elder}{Elder} \doxylink{class_n_p_c}{NPC} at the specified coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_ac65b41a2bc03d1c051c004a50e5ef973}{trader\+Spawn}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Spawns the \doxylink{class_trader}{Trader} \doxylink{class_n_p_c}{NPC} at the specified coordinates. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_yard_dragon}{Yard\+Dragon}} \& \mbox{\hyperlink{class_game_field_a9f6f66d37bce047559d997cc1dd88264}{get\+Dragon}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \doxylink{class_yard_dragon}{Yard\+Dragon}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a26e89feb38ef9a67086e544b00f19324}{slime\+Spawn}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Spawns a \doxylink{class_slime}{Slime} enemy at the specified coordinates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a58fbaf67ef7374fa22f4830000ca8430}{bandit\+Spawn}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Spawns a \doxylink{class_bandit}{Bandit} enemy at the specified coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_field_a1f7bfa05927106756ddceda0da6d6b6a}{check\+Collision}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Checks for collision at the specified coordinates. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_game_field_af2358f3808ea0dd69ebbdffd53d1c6b9}{check\+Dragon\+Range}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Checks if the player is within the dragon\textquotesingle{}s attack range. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_field_a4510dca2a479ef791948b82f3aba6939}\label{class_game_field_a4510dca2a479ef791948b82f3aba6939} 
+void {\bfseries combat} ()
+\begin{DoxyCompactList}\small\item\em Handles combat between the player and enemies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a427d257dee4c998c01338cc949039e1c}{Buy}} (char symb)
+\begin{DoxyCompactList}\small\item\em Handles buying items from a \doxylink{class_trader}{Trader}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a5d13806f60b874e5530bdc3cbbba6609}{Movement}} (char where)
+\begin{DoxyCompactList}\small\item\em Handles player movement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_field_a848b57771454f4074feca1f9c7db9b4d}{Interaction}} (char what)
+\begin{DoxyCompactList}\small\item\em Handles player interactions (e.\+g., speaking, showing inventory). \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $>$ $>$ \& \mbox{\hyperlink{class_game_field_a4274f9009edf5ba7775f5bdc2e4c0f3a}{get\+Enemies}} ()
+\begin{DoxyCompactList}\small\item\em Gets the vector of enemies. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_n_p_c}{NPC}} $>$ $>$ \& \mbox{\hyperlink{class_game_field_aa3142411d5f868c914ff5a350a63b3ba}{get\+NPC}} ()
+\begin{DoxyCompactList}\small\item\em Gets the vector of NPCs. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_field_aba72f153835cbde8f79770d9e3b03546}\label{class_game_field_aba72f153835cbde8f79770d9e3b03546} 
+void {\bfseries move\+Enemies} ()
+\begin{DoxyCompactList}\small\item\em Moves the enemies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_game_field_abf989ef385f27a18b1f9911339595196}\label{class_game_field_abf989ef385f27a18b1f9911339595196} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $>$ $>$ {\bfseries enemies}
+\begin{DoxyCompactList}\small\item\em Vector of shared pointers to enemies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents the game field. 
+
+The \doxylink{class_game_field}{Game\+Field} class manages the game map, player, enemies, and NPCs. It handles drawing the field, player movement, interactions, and combat. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_field_ab3cba84d3ad50508fad6adab6aa699f7}\index{GameField@{GameField}!GameField@{GameField}}
+\index{GameField@{GameField}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{GameField()}{GameField()}}
+{\footnotesize\ttfamily \label{class_game_field_ab3cba84d3ad50508fad6adab6aa699f7} 
+Game\+Field\+::\+Game\+Field (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{p}{, }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_yard_dragon}{Yard\+Dragon}} $>$ \&}]{d}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_game_field}{Game\+Field} class. 
+
+Initializes the game field, player, and dragon.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Reference to the \doxylink{class_player}{Player} object. \\
+\hline
+{\em d} & Shared pointer to the \doxylink{class_yard_dragon}{Yard\+Dragon} object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_field_a58fbaf67ef7374fa22f4830000ca8430}\index{GameField@{GameField}!banditSpawn@{banditSpawn}}
+\index{banditSpawn@{banditSpawn}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{banditSpawn()}{banditSpawn()}}
+{\footnotesize\ttfamily \label{class_game_field_a58fbaf67ef7374fa22f4830000ca8430} 
+void Game\+Field\+::bandit\+Spawn (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Spawns a \doxylink{class_bandit}{Bandit} enemy at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_a427d257dee4c998c01338cc949039e1c}\index{GameField@{GameField}!Buy@{Buy}}
+\index{Buy@{Buy}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{Buy()}{Buy()}}
+{\footnotesize\ttfamily \label{class_game_field_a427d257dee4c998c01338cc949039e1c} 
+void Game\+Field\+::\+Buy (\begin{DoxyParamCaption}\item[{char}]{symb}{}\end{DoxyParamCaption})}
+
+
+
+Handles buying items from a \doxylink{class_trader}{Trader}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em symb} & The symbol representing the item to buy. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_a1f7bfa05927106756ddceda0da6d6b6a}\index{GameField@{GameField}!checkCollision@{checkCollision}}
+\index{checkCollision@{checkCollision}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{checkCollision()}{checkCollision()}}
+{\footnotesize\ttfamily \label{class_game_field_a1f7bfa05927106756ddceda0da6d6b6a} 
+bool Game\+Field\+::check\+Collision (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Checks for collision at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if there is a collision, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_game_field_af2358f3808ea0dd69ebbdffd53d1c6b9}\index{GameField@{GameField}!checkDragonRange@{checkDragonRange}}
+\index{checkDragonRange@{checkDragonRange}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{checkDragonRange()}{checkDragonRange()}}
+{\footnotesize\ttfamily \label{class_game_field_af2358f3808ea0dd69ebbdffd53d1c6b9} 
+bool Game\+Field\+::check\+Dragon\+Range (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the player is within the dragon\textquotesingle{}s attack range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate of the dragon. \\
+\hline
+{\em y} & The y-\/coordinate of the dragon. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool True if the player is within range, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_game_field_a0ad673c79121f346a147712cc6211be5}\index{GameField@{GameField}!draw@{draw}}
+\index{draw@{draw}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_game_field_a0ad673c79121f346a147712cc6211be5} 
+void Game\+Field\+::draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Draws the game field. 
+
+Outputs the current state of the game field to the console. \Hypertarget{class_game_field_aa0beca8acb80ab6878d03f79c01d41b9}\index{GameField@{GameField}!elderSpawn@{elderSpawn}}
+\index{elderSpawn@{elderSpawn}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{elderSpawn()}{elderSpawn()}}
+{\footnotesize\ttfamily \label{class_game_field_aa0beca8acb80ab6878d03f79c01d41b9} 
+void Game\+Field\+::elder\+Spawn (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Spawns the \doxylink{class_elder}{Elder} \doxylink{class_n_p_c}{NPC} at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_a9f6f66d37bce047559d997cc1dd88264}\index{GameField@{GameField}!getDragon@{getDragon}}
+\index{getDragon@{getDragon}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{getDragon()}{getDragon()}}
+{\footnotesize\ttfamily \label{class_game_field_a9f6f66d37bce047559d997cc1dd88264} 
+\mbox{\hyperlink{class_yard_dragon}{Yard\+Dragon}} \& Game\+Field\+::get\+Dragon (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the \doxylink{class_yard_dragon}{Yard\+Dragon}. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{class_yard_dragon}{Yard\+Dragon}\& The \doxylink{class_yard_dragon}{Yard\+Dragon}. 
+\end{DoxyReturn}
+\Hypertarget{class_game_field_abdf655dffd107caa510001cf2d3f2f06}\index{GameField@{GameField}!getElder@{getElder}}
+\index{getElder@{getElder}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{getElder()}{getElder()}}
+{\footnotesize\ttfamily \label{class_game_field_abdf655dffd107caa510001cf2d3f2f06} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_elder}{Elder}} $>$ Game\+Field\+::get\+Elder (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the \doxylink{class_elder}{Elder} \doxylink{class_n_p_c}{NPC}. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Elder$>$ The \doxylink{class_elder}{Elder} \doxylink{class_n_p_c}{NPC}. 
+\end{DoxyReturn}
+\Hypertarget{class_game_field_a4274f9009edf5ba7775f5bdc2e4c0f3a}\index{GameField@{GameField}!getEnemies@{getEnemies}}
+\index{getEnemies@{getEnemies}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{getEnemies()}{getEnemies()}}
+{\footnotesize\ttfamily \label{class_game_field_a4274f9009edf5ba7775f5bdc2e4c0f3a} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $>$ $>$ \& Game\+Field\+::get\+Enemies (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the vector of enemies. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\+Enemy$>$$>$\& The vector of enemies. 
+\end{DoxyReturn}
+\Hypertarget{class_game_field_a89649bab35344e7fa21628838a939040}\index{GameField@{GameField}!getInputSymb@{getInputSymb}}
+\index{getInputSymb@{getInputSymb}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{getInputSymb()}{getInputSymb()}}
+{\footnotesize\ttfamily \label{class_game_field_a89649bab35344e7fa21628838a939040} 
+char Game\+Field\+::get\+Input\+Symb (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the last input symbol. 
+
+\begin{DoxyReturn}{Returns}
+char The last input symbol. 
+\end{DoxyReturn}
+\Hypertarget{class_game_field_aa3142411d5f868c914ff5a350a63b3ba}\index{GameField@{GameField}!getNPC@{getNPC}}
+\index{getNPC@{getNPC}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{getNPC()}{getNPC()}}
+{\footnotesize\ttfamily \label{class_game_field_aa3142411d5f868c914ff5a350a63b3ba} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_n_p_c}{NPC}} $>$ $>$ \& Game\+Field\+::get\+NPC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the vector of NPCs. 
+
+\begin{DoxyReturn}{Returns}
+std\+::vector$<$std\+::shared\+\_\+ptr$<$\+NPC$>$$>$\& The vector of NPCs. 
+\end{DoxyReturn}
+\Hypertarget{class_game_field_a553a5e0e162c51117662620fb00f327f}\index{GameField@{GameField}!getPWasSeenD@{getPWasSeenD}}
+\index{getPWasSeenD@{getPWasSeenD}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{getPWasSeenD()}{getPWasSeenD()}}
+{\footnotesize\ttfamily \label{class_game_field_a553a5e0e162c51117662620fb00f327f} 
+bool Game\+Field\+::get\+PWas\+SeenD (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the flag indicating if the player was seen by the dragon. 
+
+\begin{DoxyReturn}{Returns}
+bool The flag value. 
+\end{DoxyReturn}
+\Hypertarget{class_game_field_accc8a84a4c397e139fc87927cd218c0d}\index{GameField@{GameField}!getSymbol@{getSymbol}}
+\index{getSymbol@{getSymbol}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{getSymbol()}{getSymbol()}}
+{\footnotesize\ttfamily \label{class_game_field_accc8a84a4c397e139fc87927cd218c0d} 
+char Game\+Field\+::get\+Symbol (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the symbol at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char The symbol at the specified coordinates. 
+\end{DoxyReturn}
+\Hypertarget{class_game_field_a848b57771454f4074feca1f9c7db9b4d}\index{GameField@{GameField}!Interaction@{Interaction}}
+\index{Interaction@{Interaction}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{Interaction()}{Interaction()}}
+{\footnotesize\ttfamily \label{class_game_field_a848b57771454f4074feca1f9c7db9b4d} 
+void Game\+Field\+::\+Interaction (\begin{DoxyParamCaption}\item[{char}]{what}{}\end{DoxyParamCaption})}
+
+
+
+Handles player interactions (e.\+g., speaking, showing inventory). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em what} & The type of interaction (\textquotesingle{}e\textquotesingle{}, \textquotesingle{}i\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_a5d13806f60b874e5530bdc3cbbba6609}\index{GameField@{GameField}!Movement@{Movement}}
+\index{Movement@{Movement}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{Movement()}{Movement()}}
+{\footnotesize\ttfamily \label{class_game_field_a5d13806f60b874e5530bdc3cbbba6609} 
+void Game\+Field\+::\+Movement (\begin{DoxyParamCaption}\item[{char}]{where}{}\end{DoxyParamCaption})}
+
+
+
+Handles player movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em where} & The direction to move (\textquotesingle{}w\textquotesingle{}, \textquotesingle{}a\textquotesingle{}, \textquotesingle{}s\textquotesingle{}, \textquotesingle{}d\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_a74cf40ff53346281c11e21f0f7f25168}\index{GameField@{GameField}!playerSpawn@{playerSpawn}}
+\index{playerSpawn@{playerSpawn}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{playerSpawn()}{playerSpawn()}}
+{\footnotesize\ttfamily \label{class_game_field_a74cf40ff53346281c11e21f0f7f25168} 
+void Game\+Field\+::player\+Spawn (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Spawns the player at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_a74bc7e4a82be2ffcac23db93cbb5eeeb}\index{GameField@{GameField}!setInputSymb@{setInputSymb}}
+\index{setInputSymb@{setInputSymb}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{setInputSymb()}{setInputSymb()}}
+{\footnotesize\ttfamily \label{class_game_field_a74bc7e4a82be2ffcac23db93cbb5eeeb} 
+void Game\+Field\+::set\+Input\+Symb (\begin{DoxyParamCaption}\item[{char}]{new\+\_\+symb}{}\end{DoxyParamCaption})}
+
+
+
+Sets the last input symbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+symb} & The new input symbol. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_a08fe176d9eb62220ac8a008c738fddb1}\index{GameField@{GameField}!setPWasSeenD@{setPWasSeenD}}
+\index{setPWasSeenD@{setPWasSeenD}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{setPWasSeenD()}{setPWasSeenD()}}
+{\footnotesize\ttfamily \label{class_game_field_a08fe176d9eb62220ac8a008c738fddb1} 
+void Game\+Field\+::set\+PWas\+SeenD (\begin{DoxyParamCaption}\item[{bool}]{new\+\_\+value}{}\end{DoxyParamCaption})}
+
+
+
+Sets the flag indicating if the player was seen by the dragon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+value} & The new flag value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_ae90caee0e440013cae5142ae86db6cc5}\index{GameField@{GameField}!setSymbol@{setSymbol}}
+\index{setSymbol@{setSymbol}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{setSymbol()}{setSymbol()}}
+{\footnotesize\ttfamily \label{class_game_field_ae90caee0e440013cae5142ae86db6cc5} 
+void Game\+Field\+::set\+Symbol (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{, }\item[{char}]{symbol}{}\end{DoxyParamCaption})}
+
+
+
+Sets the symbol at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+{\em symbol} & The new symbol. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_a26e89feb38ef9a67086e544b00f19324}\index{GameField@{GameField}!slimeSpawn@{slimeSpawn}}
+\index{slimeSpawn@{slimeSpawn}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{slimeSpawn()}{slimeSpawn()}}
+{\footnotesize\ttfamily \label{class_game_field_a26e89feb38ef9a67086e544b00f19324} 
+void Game\+Field\+::slime\+Spawn (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Spawns a \doxylink{class_slime}{Slime} enemy at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_ac65b41a2bc03d1c051c004a50e5ef973}\index{GameField@{GameField}!traderSpawn@{traderSpawn}}
+\index{traderSpawn@{traderSpawn}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{traderSpawn()}{traderSpawn()}}
+{\footnotesize\ttfamily \label{class_game_field_ac65b41a2bc03d1c051c004a50e5ef973} 
+void Game\+Field\+::trader\+Spawn (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Spawns the \doxylink{class_trader}{Trader} \doxylink{class_n_p_c}{NPC} at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_game_field_a54583bb7b440de18442ec5b8cd0fb246}\index{GameField@{GameField}!yardDragonSpawn@{yardDragonSpawn}}
+\index{yardDragonSpawn@{yardDragonSpawn}!GameField@{GameField}}
+\doxysubsubsection{\texorpdfstring{yardDragonSpawn()}{yardDragonSpawn()}}
+{\footnotesize\ttfamily \label{class_game_field_a54583bb7b440de18442ec5b8cd0fb246} 
+void Game\+Field\+::yard\+Dragon\+Spawn (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Spawns the \doxylink{class_yard_dragon}{Yard\+Dragon} at the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & The x-\/coordinate. \\
+\hline
+{\em y} & The y-\/coordinate. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniillickovaha/\+Documents/\+My\+Game/include/Game\+Field.\+h\end{DoxyCompactItemize}

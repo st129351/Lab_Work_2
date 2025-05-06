@@ -1,0 +1,45 @@
+\doxysection{Slime.\+h}
+\hypertarget{_slime_8h_source}{}\label{_slime_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/Slime.h@{/Users/daniillickovaha/Documents/MyGame/include/Slime.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//Lichkovaha\ Daniil}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//st129351@student.spbu.ru}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//LabWork2}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ SLIME\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ SLIME\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_field}{GameField}};\ \textcolor{comment}{//\ forward\ declaration}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_slime_a1afa28f2723fcf09a2d7c85d013df3b5}{Slime}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_enemy_a8696e0ba679ea389fb52697446ae469f}{Enemy}}}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ poison\_damage;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ is\_poisoning;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ std::chrono::system\_clock::time\_point\ poison\_start;\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{const}\ std::chrono::seconds\ poison\_duration\{3\};\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{class_slime_a1afa28f2723fcf09a2d7c85d013df3b5}{Slime}}(std::string\ name,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ health,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ damage,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ iq,\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ exp,\ \mbox{\hyperlink{class_player}{Player}}*\ player,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ poizon\_damage);}
+\DoxyCodeLine{00043\ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{class_slime_a25135b227bf6cc8e63e4f32272a28729}{\string~Slime}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00048\ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slime_ab14d82b614f57db33c5364384244d5be}{onDeath}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slime_a375c7253d0488b0de952ca1cbaf788b0}{applyPoison}}(\mbox{\hyperlink{class_player}{Player}}\&\ player);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_slime_afbfbb50a34681cd34b83482d751b6aa9}{getPoisonDamage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slime_a33f767c33bc537c30406e86a2bee0a71}{setPoisonDamage}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ new\_poison\_damage);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_slime_a975e0506b187b89e2eda808c47fa75c2}{move}}(\mbox{\hyperlink{class_player}{Player}}\&\ player,\ \mbox{\hyperlink{class_game_field}{GameField}}\&\ field)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00091\ \};}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
