@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "GameField.h"
 #include "Player.h"
 #include "Slime.h"
@@ -124,20 +127,23 @@ void GameField::Movement(char where)
 
 void GameField::Interaction(char what)
 {
+    // Проверка, запускаемся ли мы в среде тестирования
+    bool in_test_environment = (getenv("RUNNING_TESTS") != nullptr);
+    
     switch (what)
     {
         case 'e':
             std::cout << "\033[2J\033[1;1H"; 
             player.NPCSpeak(npc_characters);
             std::cout << "Press any key to continue..." << std::endl;
-            getchar();
+            if (!in_test_environment) getchar();
             std::cout << "\033[2J\033[1;1H";
             break;
         case 'i': 
             std::cout << "\033[2J\033[1;1H";
             std::cout << player.showInventory() << std::endl; break;
             std::cout << "Press any key to continue..." << std::endl;
-            getchar();
+            if (!in_test_environment) getchar();
             break;
         return;
     }
@@ -208,7 +214,7 @@ bool GameField::checkDragonRange(int x, int y)
 {
     int a = player.getX_pos() - x;
     int b = player.getY_pos() - y;
-    if (abs(a) <= 3 && abs(b) <= 3)
+    if (abs(a) <= dragon->getAttackRange() && abs(b) <= dragon->getAttackRange())
     {
         return true;
     }
