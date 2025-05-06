@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "Player.h"
 #include "Enemy.h"
 #include "GameField.h"
@@ -15,17 +18,14 @@
 #include "AHeal.h"
 #include "ADash.h"
 
-Player::Player(): Fighter("", 100, 10), max_level(3), inventory(*this)
+Player::Player(std::string name): Fighter("", 100, 10), max_level(3), inventory(*this)
 {
     this->level = 1;
     this->exp = 0;
     this->gold = 100;
-    this->x_pos = 14;  // начальная позиция x
-    this->y_pos = 13;   // начальная позиция y (центр по вертикали)
+    this->x_pos = 14;  
+    this->y_pos = 13;  
     std::cout << "\033[2J\033[1;1H";
-    std::cout << "Enter the name of your hero: ";
-    std::cin.ignore(); // clear buffer, if \n
-    std::getline(std::cin, name);
     setName(name);
     persev_flag = false;
     best_exp_flag = false;
@@ -70,7 +70,7 @@ void Player::levelUp()
 std::string Player::showInventory()
 {
     std::cout << "INVENTORY" << std::endl;
-    return inventory.show();
+    return inventory.show() + "\nCells: " + std::to_string(inventory.getAvailableSlots());
 }
 
 // getters 
@@ -107,6 +107,21 @@ std::shared_ptr<BestExp> Player::getBestExp()
 std::shared_ptr<AHeal> Player::getHeal() 
 {
     return heal;
+}
+
+std::shared_ptr<AMadness> Player::getMadness() 
+{
+    return madness;
+}
+
+std::shared_ptr<AKillerLook> Player::getKillerLook() 
+{
+    return killer_look;
+}
+
+std::shared_ptr<AFearOfDeath> Player::getFearOfDeath() 
+{
+    return fear_death;
 }
 
 std::shared_ptr<ADash> Player::getDash()
