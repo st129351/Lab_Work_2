@@ -1,0 +1,136 @@
+\doxysection{Game Class Reference}
+\hypertarget{class_game}{}\label{class_game}\index{Game@{Game}}
+
+
+Manages the overall game flow and logic.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_a4378a42e526f955b61495769ec258921}{Game}} (\mbox{\hyperlink{class_player}{Player}} \&p)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_game}{Game} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_a3d09cd0b68ef69107d36360ca903e023}\label{class_game_a3d09cd0b68ef69107d36360ca903e023} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Game} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor for the \doxylink{class_game}{Game} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a6a42a6cb1652eb44faafe3d616cc9b74}{enable\+Raw\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Enables raw mode for terminal input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ad8f6eee6f0fac099c07a65bf37d2fb69}{disable\+Raw\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Disables raw mode for terminal input. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a3fa1fd5cde5e8e3cd7def3c8e1ec9ac7}{start\+\_\+game}} ()
+\begin{DoxyCompactList}\small\item\em Starts the main game loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a0fef43fe64b6f211060ef8daec53c954}{start\+Village}} ()
+\begin{DoxyCompactList}\small\item\em Starts the village level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_ad31236e67b5ddcaa9640d2e7a13235fb}{Level\+\_\+1}} ()
+\begin{DoxyCompactList}\small\item\em Runs Level 1 of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a7ad7a3e612e40de6ed68a3c55d26b0bf}{Level\+\_\+2}} ()
+\begin{DoxyCompactList}\small\item\em Runs Level 2 of the game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_a75f4775796e49510ceee2d5dceb0a5ac}{Level\+\_\+3}} ()
+\begin{DoxyCompactList}\small\item\em Runs Level 3 of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the overall game flow and logic. 
+
+The \doxylink{class_game}{Game} class handles the initialization, running, and termination of the game. It manages the player, game field, and game levels. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_game_a4378a42e526f955b61495769ec258921}\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily \label{class_game_a4378a42e526f955b61495769ec258921} 
+Game\+::\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_game}{Game} class. 
+
+Initializes the game with the player and game field.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Reference to the \doxylink{class_player}{Player} object. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_game_ad8f6eee6f0fac099c07a65bf37d2fb69}\index{Game@{Game}!disableRawMode@{disableRawMode}}
+\index{disableRawMode@{disableRawMode}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{disableRawMode()}{disableRawMode()}}
+{\footnotesize\ttfamily \label{class_game_ad8f6eee6f0fac099c07a65bf37d2fb69} 
+void Game\+::disable\+Raw\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Disables raw mode for terminal input. 
+
+Returns the terminal to its original settings. \Hypertarget{class_game_a6a42a6cb1652eb44faafe3d616cc9b74}\index{Game@{Game}!enableRawMode@{enableRawMode}}
+\index{enableRawMode@{enableRawMode}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{enableRawMode()}{enableRawMode()}}
+{\footnotesize\ttfamily \label{class_game_a6a42a6cb1652eb44faafe3d616cc9b74} 
+void Game\+::enable\+Raw\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Enables raw mode for terminal input. 
+
+Raw mode allows reading input without waiting for the Enter key. \Hypertarget{class_game_ad31236e67b5ddcaa9640d2e7a13235fb}\index{Game@{Game}!Level\_1@{Level\_1}}
+\index{Level\_1@{Level\_1}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Level\_1()}{Level\_1()}}
+{\footnotesize\ttfamily \label{class_game_ad31236e67b5ddcaa9640d2e7a13235fb} 
+void Game\+::\+Level\+\_\+1 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Runs Level 1 of the game. 
+
+Initializes and manages the gameplay for Level 1. \Hypertarget{class_game_a7ad7a3e612e40de6ed68a3c55d26b0bf}\index{Game@{Game}!Level\_2@{Level\_2}}
+\index{Level\_2@{Level\_2}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Level\_2()}{Level\_2()}}
+{\footnotesize\ttfamily \label{class_game_a7ad7a3e612e40de6ed68a3c55d26b0bf} 
+void Game\+::\+Level\+\_\+2 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Runs Level 2 of the game. 
+
+Initializes and manages the gameplay for Level 2. \Hypertarget{class_game_a75f4775796e49510ceee2d5dceb0a5ac}\index{Game@{Game}!Level\_3@{Level\_3}}
+\index{Level\_3@{Level\_3}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Level\_3()}{Level\_3()}}
+{\footnotesize\ttfamily \label{class_game_a75f4775796e49510ceee2d5dceb0a5ac} 
+void Game\+::\+Level\+\_\+3 (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Runs Level 3 of the game. 
+
+Initializes and manages the gameplay for Level 3. \Hypertarget{class_game_a3fa1fd5cde5e8e3cd7def3c8e1ec9ac7}\index{Game@{Game}!start\_game@{start\_game}}
+\index{start\_game@{start\_game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{start\_game()}{start\_game()}}
+{\footnotesize\ttfamily \label{class_game_a3fa1fd5cde5e8e3cd7def3c8e1ec9ac7} 
+void Game\+::start\+\_\+game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts the main game loop. 
+
+Handles game logic, input, and rendering. \Hypertarget{class_game_a0fef43fe64b6f211060ef8daec53c954}\index{Game@{Game}!startVillage@{startVillage}}
+\index{startVillage@{startVillage}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{startVillage()}{startVillage()}}
+{\footnotesize\ttfamily \label{class_game_a0fef43fe64b6f211060ef8daec53c954} 
+void Game\+::start\+Village (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Starts the village level. 
+
+Initializes and runs the village level. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniillickovaha/\+Documents/\+My\+Game/include/Game.\+h\end{DoxyCompactItemize}

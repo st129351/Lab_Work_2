@@ -1,0 +1,216 @@
+\doxysection{Slime Class Reference}
+\hypertarget{class_slime}{}\label{class_slime}\index{Slime@{Slime}}
+
+
+Class representing a slime enemy in the game.  
+
+
+
+
+{\ttfamily \#include $<$Slime.\+h$>$}
+
+Inheritance diagram for Slime\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_slime}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_slime_a1afa28f2723fcf09a2d7c85d013df3b5}{Slime}} (std\+::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int exp, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player, unsigned int poizon\+\_\+damage)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_slime}{Slime} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_slime_a25135b227bf6cc8e63e4f32272a28729}\label{class_slime_a25135b227bf6cc8e63e4f32272a28729} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Slime} ()=default
+\begin{DoxyCompactList}\small\item\em Default destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slime_ab14d82b614f57db33c5364384244d5be}{on\+Death}} () override
+\begin{DoxyCompactList}\small\item\em Handles slime\textquotesingle{}s death event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slime_a375c7253d0488b0de952ca1cbaf788b0}{apply\+Poison}} (\mbox{\hyperlink{class_player}{Player}} \&player)
+\begin{DoxyCompactList}\small\item\em Applies poison effect to the player. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_slime_afbfbb50a34681cd34b83482d751b6aa9}{get\+Poison\+Damage}} () const
+\begin{DoxyCompactList}\small\item\em Gets current poison damage value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slime_a33f767c33bc537c30406e86a2bee0a71}{set\+Poison\+Damage}} (unsigned int new\+\_\+poison\+\_\+damage)
+\begin{DoxyCompactList}\small\item\em Sets new poison damage value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_slime_a975e0506b187b89e2eda808c47fa75c2}{move}} (\mbox{\hyperlink{class_player}{Player}} \&player, \mbox{\hyperlink{class_game_field}{Game\+Field}} \&field) override
+\begin{DoxyCompactList}\small\item\em Moves the slime on the game field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_enemy}{Enemy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_enemy_a8696e0ba679ea389fb52697446ae469f}{Enemy}} (std\+::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int exp, \mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}player)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_enemy}{Enemy} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_enemy_aafb628c66008e33afdd750e2f492bd98}{\texorpdfstring{$\sim$}{\string~}\+Enemy}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_enemy}{Enemy} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_enemy_acf53574bd76342eef80977714d996461}{get\+Enemy\+Description}} () const
+\begin{DoxyCompactList}\small\item\em Gets the description of the enemy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a74f52fe127fa64acac65556edd5ad131}{set\+Enemy\+Description}} (const std\+::string \&new\+\_\+enemy\+\_\+description)
+\begin{DoxyCompactList}\small\item\em Sets a new description for the enemy. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_enemy_a38af9802c64cff1dc3b01d0c9a6f6788}{get\+IQ}} () const
+\begin{DoxyCompactList}\small\item\em Gets the intelligence quotient of the enemy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_abc0fe311adb5ce143ec101146e6b793a}{set\+IQ}} (unsigned int new\+\_\+iq)
+\begin{DoxyCompactList}\small\item\em Sets a new intelligence quotient for the enemy. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_enemy_aad85bfd0a924bdb13f0249b915f33e5e}{get\+Exp}} () const
+\begin{DoxyCompactList}\small\item\em Gets the experience points awarded for defeating the enemy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_a9e69c81eb02726250f476a31017074f4}{set\+Exp}} (unsigned int new\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Sets the experience points awarded for defeating the enemy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_player}{Player}} \& \mbox{\hyperlink{class_enemy_aa93080c4ed27f4e6cfe29906322359a2}{get\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Gets a reference to the \doxylink{class_player}{Player} object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_enemy_ae72315565d7a2c6045149f3222ffe548}{set\+Player}} (\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}new\+\_\+player)
+\begin{DoxyCompactList}\small\item\em Sets a new \doxylink{class_player}{Player} object for the enemy. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_enemy_afee89d923ed6ac21c0a4b76f3ee8c54e}{get\+X\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Gets the X-\/coordinate of the enemy\textquotesingle{}s position. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_enemy_a69d07a030b947589f103658d12718f3a}{get\+Y\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Y-\/coordinate of the enemy\textquotesingle{}s position. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_enemy_a9e224b96fd540c74d4f3bc136c0cb477}{set\+X\+\_\+pos}} (unsigned int new\+\_\+x\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Sets the X-\/coordinate of the enemy\textquotesingle{}s position. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_enemy_a8213fecb78385dd8de0d1ea7b8435060}{set\+Y\+\_\+pos}} (unsigned int new\+\_\+y\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Sets the Y-\/coordinate of the enemy\textquotesingle{}s position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_fighter}{Fighter}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fighter_a2fc1decdc036984250c4e000cbbf82bc}{Fighter}} (const std\+::string \&name, unsigned int health, unsigned int damage)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_fighter}{Fighter} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_fighter_abd5c2c5ff458a5c40af2edb248458437}{\texorpdfstring{$\sim$}{\string~}\+Fighter}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_fighter}{Fighter} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a7e12810e544d1566251a4444b89af25c}{attack}} (\mbox{\hyperlink{class_fighter}{Fighter}} \&target)
+\begin{DoxyCompactList}\small\item\em Performs an attack on the target fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a23af81181e0074c92818d90952ac4ab4}{take\+Damage}} (unsigned int damage)
+\begin{DoxyCompactList}\small\item\em Reduces the fighter\textquotesingle{}s health by the given damage amount. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_fighter_a346ed5487b7ea943300372d0513bff09}{is\+Alive}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the fighter is still alive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_fighter_adc56e1cb2f6cda4e9c844f9635fd30f9}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the fighter. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_fighter_a1a6fdef761ec1bb1fcfd4aa550ac9429}{get\+Damage}} () const
+\begin{DoxyCompactList}\small\item\em Gets the attack damage of the fighter. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_fighter_adfbaa0aacdfd8ec8a4bdb57ea6dce3d5}{get\+Health}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current health of the fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a4cbf0901c81df9edb077e555e96e5e3b}{set\+Health}} (unsigned int \&new\+\_\+health)
+\begin{DoxyCompactList}\small\item\em Sets a new health value for the fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a59c031d7142feea08fd0b3f092ea5e03}{set\+Damage}} (unsigned int \&new\+\_\+damage)
+\begin{DoxyCompactList}\small\item\em Sets a new attack damage value for the fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_af321357e6d09fe71582d89b5ec280007}{set\+Name}} (const std\+::string \&new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets a new name for the fighter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a slime enemy in the game. 
+
+\doxylink{class_slime}{Slime} inherits from the \doxylink{class_enemy}{Enemy} base class and implements specific slime behavior, including poison attacks and movement patterns. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_slime_a1afa28f2723fcf09a2d7c85d013df3b5}\index{Slime@{Slime}!Slime@{Slime}}
+\index{Slime@{Slime}!Slime@{Slime}}
+\doxysubsubsection{\texorpdfstring{Slime()}{Slime()}}
+{\footnotesize\ttfamily \label{class_slime_a1afa28f2723fcf09a2d7c85d013df3b5} 
+Slime\+::\+Slime (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{, }\item[{unsigned int}]{health}{, }\item[{unsigned int}]{damage}{, }\item[{unsigned int}]{iq}{, }\item[{unsigned int}]{exp}{, }\item[{\mbox{\hyperlink{class_player}{Player}} \texorpdfstring{$\ast$}{*}}]{player}{, }\item[{unsigned int}]{poizon\+\_\+damage}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_slime}{Slime} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_slime}{Slime}\textquotesingle{}s name \\
+\hline
+{\em health} & \doxylink{class_slime}{Slime}\textquotesingle{}s health points \\
+\hline
+{\em damage} & \doxylink{class_slime}{Slime}\textquotesingle{}s base damage \\
+\hline
+{\em iq} & \doxylink{class_slime}{Slime}\textquotesingle{}s intelligence value \\
+\hline
+{\em exp} & Experience gained for killing the slime \\
+\hline
+{\em player} & Pointer to the player object \\
+\hline
+{\em poizon\+\_\+damage} & Initial poison damage value \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_slime_a375c7253d0488b0de952ca1cbaf788b0}\index{Slime@{Slime}!applyPoison@{applyPoison}}
+\index{applyPoison@{applyPoison}!Slime@{Slime}}
+\doxysubsubsection{\texorpdfstring{applyPoison()}{applyPoison()}}
+{\footnotesize\ttfamily \label{class_slime_a375c7253d0488b0de952ca1cbaf788b0} 
+void Slime\+::apply\+Poison (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{player}{}\end{DoxyParamCaption})}
+
+
+
+Applies poison effect to the player. 
+
+If poison is not active, starts the poison effect. If poison is active, continues dealing damage until duration expires.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Reference to the player object \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_slime_afbfbb50a34681cd34b83482d751b6aa9}\index{Slime@{Slime}!getPoisonDamage@{getPoisonDamage}}
+\index{getPoisonDamage@{getPoisonDamage}!Slime@{Slime}}
+\doxysubsubsection{\texorpdfstring{getPoisonDamage()}{getPoisonDamage()}}
+{\footnotesize\ttfamily \label{class_slime_afbfbb50a34681cd34b83482d751b6aa9} 
+unsigned int Slime\+::get\+Poison\+Damage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets current poison damage value. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int Current poison damage 
+\end{DoxyReturn}
+\Hypertarget{class_slime_a975e0506b187b89e2eda808c47fa75c2}\index{Slime@{Slime}!move@{move}}
+\index{move@{move}!Slime@{Slime}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily \label{class_slime_a975e0506b187b89e2eda808c47fa75c2} 
+void Slime\+::move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{player}{, }\item[{\mbox{\hyperlink{class_game_field}{Game\+Field}} \&}]{field}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Moves the slime on the game field. 
+
+The slime moves towards the player if the player is within 6 units distance. Implements basic pathfinding based on relative position to player.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & Reference to the player object \\
+\hline
+{\em field} & Reference to the game field \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_enemy_aecbffc993f8cc3235d8b4bf333a788d6}{Enemy}}.
+
+\Hypertarget{class_slime_ab14d82b614f57db33c5364384244d5be}\index{Slime@{Slime}!onDeath@{onDeath}}
+\index{onDeath@{onDeath}!Slime@{Slime}}
+\doxysubsubsection{\texorpdfstring{onDeath()}{onDeath()}}
+{\footnotesize\ttfamily \label{class_slime_ab14d82b614f57db33c5364384244d5be} 
+void Slime\+::on\+Death (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles slime\textquotesingle{}s death event. 
+
+Overridden method from the \doxylink{class_enemy}{Enemy} base class. Gives the player experience and gold for killing the slime. 
+
+Implements \mbox{\hyperlink{class_fighter_a0a3b1b080d5a9d0fa40c9cffa9ff5011}{Fighter}}.
+
+\Hypertarget{class_slime_a33f767c33bc537c30406e86a2bee0a71}\index{Slime@{Slime}!setPoisonDamage@{setPoisonDamage}}
+\index{setPoisonDamage@{setPoisonDamage}!Slime@{Slime}}
+\doxysubsubsection{\texorpdfstring{setPoisonDamage()}{setPoisonDamage()}}
+{\footnotesize\ttfamily \label{class_slime_a33f767c33bc537c30406e86a2bee0a71} 
+void Slime\+::set\+Poison\+Damage (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+poison\+\_\+damage}{}\end{DoxyParamCaption})}
+
+
+
+Sets new poison damage value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+poison\+\_\+damage} & New poison damage value \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniillickovaha/\+Documents/\+My\+Game/include/Slime.\+h\end{DoxyCompactItemize}

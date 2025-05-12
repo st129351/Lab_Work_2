@@ -1,8 +1,12 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "Slime.h"
 #include "Player.h"
 #include "GameField.h"
 
-Slime::Slime(std::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int poizon_damage) : Enemy(name, health, damage, iq)
+Slime::Slime(std::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int exp, Player* player, unsigned int poizon_damage) 
+: Enemy(name, health, damage, iq, exp, player)
 {
     this->poison_damage = 3;
     this->is_poisoning = false;
@@ -10,7 +14,23 @@ Slime::Slime(std::string name, unsigned int health, unsigned int damage, unsigne
 
 void Slime::onDeath()
 {
+    static bool ODProgress = false;
+    
+    if (ODProgress) {
+        return;
+    }
+    
+    ODProgress = true;
+    
+    Player& curr_player = this->getPlayer();
+    unsigned int new_exp = curr_player.getExp() + this->getExp();
+    curr_player.setExp(new_exp);
+    unsigned int new_gold = curr_player.getGold() + this->getExp() * 2;
+    curr_player.setGold(new_gold);
+    
     std::cout << "Slime is dead 💥" << std::endl;
+    
+    ODProgress = false;
 }
 
 unsigned int Slime::getPoisonDamage() const
@@ -61,7 +81,7 @@ void Slime::move(Player& player, GameField& field)
     int new_x = this->getX_pos();
     int new_y = this->getY_pos();
 
-    if (!field.checkCollision(this->getX_pos(), this->getY_pos()))
+    if (!field.checkCollision(this->getX_pos(), this->getY_pos()) && dist_x <= 6 && dist_y <= 6)
     {
         if (abs(dist_x) > abs(dist_y))
         {
@@ -96,12 +116,12 @@ void Slime::move(Player& player, GameField& field)
                 new_x++;
             }
         }
-        if (field.getSymbol(new_x, new_y) != '#' && field.getSymbol(new_x, new_y) != '~')
+        if (field.getSymbol(new_x, new_y) != '#' && field.getSymbol(new_x, new_y) != 'E' && field.getSymbol(new_x, new_y) != 'T' && field.getSymbol(new_x, new_y) != 's' && field.getSymbol(new_x, new_y) != 'b' && field.getSymbol(new_x, new_y) != 'Y' && field.getSymbol(new_x, new_y) != '@')
         {
             field.setSymbol(this->getX_pos(), this->getY_pos(), ' ');
             this->setX_pos(new_x);
             this->setY_pos(new_y);
-            field.setSymbol(this->getX_pos(), this->getY_pos(), '~');
+            field.setSymbol(this->getX_pos(), this->getY_pos(), 's');
         }
     }
 }

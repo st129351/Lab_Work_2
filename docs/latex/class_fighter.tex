@@ -1,0 +1,230 @@
+\doxysection{Fighter Class Reference}
+\hypertarget{class_fighter}{}\label{class_fighter}\index{Fighter@{Fighter}}
+
+
+Base class for all fighting characters in the game.  
+
+
+
+
+{\ttfamily \#include $<$Fighter.\+h$>$}
+
+Inheritance diagram for Fighter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_fighter}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fighter_a2fc1decdc036984250c4e000cbbf82bc}{Fighter}} (const std\+::string \&name, unsigned int health, unsigned int damage)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_fighter}{Fighter} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_fighter_abd5c2c5ff458a5c40af2edb248458437}{\texorpdfstring{$\sim$}{\string~}\+Fighter}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_fighter}{Fighter} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_fighter_a0a3b1b080d5a9d0fa40c9cffa9ff5011}{on\+Death}} ()=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function for handling death. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a7e12810e544d1566251a4444b89af25c}{attack}} (\mbox{\hyperlink{class_fighter}{Fighter}} \&target)
+\begin{DoxyCompactList}\small\item\em Performs an attack on the target fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a23af81181e0074c92818d90952ac4ab4}{take\+Damage}} (unsigned int damage)
+\begin{DoxyCompactList}\small\item\em Reduces the fighter\textquotesingle{}s health by the given damage amount. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_fighter_a346ed5487b7ea943300372d0513bff09}{is\+Alive}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the fighter is still alive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_fighter_adc56e1cb2f6cda4e9c844f9635fd30f9}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the fighter. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_fighter_a1a6fdef761ec1bb1fcfd4aa550ac9429}{get\+Damage}} () const
+\begin{DoxyCompactList}\small\item\em Gets the attack damage of the fighter. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_fighter_adfbaa0aacdfd8ec8a4bdb57ea6dce3d5}{get\+Health}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current health of the fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a4cbf0901c81df9edb077e555e96e5e3b}{set\+Health}} (unsigned int \&new\+\_\+health)
+\begin{DoxyCompactList}\small\item\em Sets a new health value for the fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a59c031d7142feea08fd0b3f092ea5e03}{set\+Damage}} (unsigned int \&new\+\_\+damage)
+\begin{DoxyCompactList}\small\item\em Sets a new attack damage value for the fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_af321357e6d09fe71582d89b5ec280007}{set\+Name}} (const std\+::string \&new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets a new name for the fighter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all fighting characters in the game. 
+
+The \doxylink{class_fighter}{Fighter} class provides common properties and functions for characters that can engage in combat, such as health, damage, and attack capabilities. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_fighter_a2fc1decdc036984250c4e000cbbf82bc}\index{Fighter@{Fighter}!Fighter@{Fighter}}
+\index{Fighter@{Fighter}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{Fighter()}{Fighter()}}
+{\footnotesize\ttfamily \label{class_fighter_a2fc1decdc036984250c4e000cbbf82bc} 
+Fighter\+::\+Fighter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{unsigned int}]{health}{, }\item[{unsigned int}]{damage}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_fighter}{Fighter} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the fighter. \\
+\hline
+{\em health} & Initial health of the fighter. \\
+\hline
+{\em damage} & Attack damage of the fighter. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_fighter_abd5c2c5ff458a5c40af2edb248458437}\index{Fighter@{Fighter}!````~Fighter@{\texorpdfstring{$\sim$}{\string~}Fighter}}
+\index{````~Fighter@{\texorpdfstring{$\sim$}{\string~}Fighter}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Fighter()}{\string~Fighter()}}
+{\footnotesize\ttfamily \label{class_fighter_abd5c2c5ff458a5c40af2edb248458437} 
+virtual Fighter\+::\texorpdfstring{$\sim$}{\string~}\+Fighter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor for the \doxylink{class_fighter}{Fighter} class. 
+
+Ensures proper cleanup of derived class objects. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_fighter_a7e12810e544d1566251a4444b89af25c}\index{Fighter@{Fighter}!attack@{attack}}
+\index{attack@{attack}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{attack()}{attack()}}
+{\footnotesize\ttfamily \label{class_fighter_a7e12810e544d1566251a4444b89af25c} 
+void Fighter\+::attack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_fighter}{Fighter}} \&}]{target}{}\end{DoxyParamCaption})}
+
+
+
+Performs an attack on the target fighter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & The fighter to attack. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_fighter_a1a6fdef761ec1bb1fcfd4aa550ac9429}\index{Fighter@{Fighter}!getDamage@{getDamage}}
+\index{getDamage@{getDamage}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{getDamage()}{getDamage()}}
+{\footnotesize\ttfamily \label{class_fighter_a1a6fdef761ec1bb1fcfd4aa550ac9429} 
+unsigned int Fighter\+::get\+Damage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the attack damage of the fighter. 
+
+\begin{DoxyReturn}{Returns}
+The attack damage. 
+\end{DoxyReturn}
+\Hypertarget{class_fighter_adfbaa0aacdfd8ec8a4bdb57ea6dce3d5}\index{Fighter@{Fighter}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily \label{class_fighter_adfbaa0aacdfd8ec8a4bdb57ea6dce3d5} 
+unsigned int Fighter\+::get\+Health (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the current health of the fighter. 
+
+\begin{DoxyReturn}{Returns}
+The current health. 
+\end{DoxyReturn}
+\Hypertarget{class_fighter_adc56e1cb2f6cda4e9c844f9635fd30f9}\index{Fighter@{Fighter}!getName@{getName}}
+\index{getName@{getName}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_fighter_adc56e1cb2f6cda4e9c844f9635fd30f9} 
+std\+::string Fighter\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the fighter. 
+
+\begin{DoxyReturn}{Returns}
+The name of the fighter. 
+\end{DoxyReturn}
+\Hypertarget{class_fighter_a346ed5487b7ea943300372d0513bff09}\index{Fighter@{Fighter}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{isAlive()}{isAlive()}}
+{\footnotesize\ttfamily \label{class_fighter_a346ed5487b7ea943300372d0513bff09} 
+bool Fighter\+::is\+Alive (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the fighter is still alive. 
+
+\begin{DoxyReturn}{Returns}
+true if health is greater than 0, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_fighter_a0a3b1b080d5a9d0fa40c9cffa9ff5011}\index{Fighter@{Fighter}!onDeath@{onDeath}}
+\index{onDeath@{onDeath}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{onDeath()}{onDeath()}}
+{\footnotesize\ttfamily \label{class_fighter_a0a3b1b080d5a9d0fa40c9cffa9ff5011} 
+virtual void Fighter\+::on\+Death (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function for handling death. 
+
+Must be implemented in derived classes to define specific death behavior. 
+
+Implemented in \mbox{\hyperlink{class_bandit_a807111abe0de10ccf2513e8e4f1e88e2}{Bandit}}, \mbox{\hyperlink{class_player_a9f74889cf8c6ae77b58e36b8223b975d}{Player}}, \mbox{\hyperlink{class_slime_ab14d82b614f57db33c5364384244d5be}{Slime}}, and \mbox{\hyperlink{class_yard_dragon_a66f46ee2639a8bb162f751762c5c8c06}{Yard\+Dragon}}.
+
+\Hypertarget{class_fighter_a59c031d7142feea08fd0b3f092ea5e03}\index{Fighter@{Fighter}!setDamage@{setDamage}}
+\index{setDamage@{setDamage}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{setDamage()}{setDamage()}}
+{\footnotesize\ttfamily \label{class_fighter_a59c031d7142feea08fd0b3f092ea5e03} 
+void Fighter\+::set\+Damage (\begin{DoxyParamCaption}\item[{unsigned int \&}]{new\+\_\+damage}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new attack damage value for the fighter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+damage} & The new damage value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_fighter_a4cbf0901c81df9edb077e555e96e5e3b}\index{Fighter@{Fighter}!setHealth@{setHealth}}
+\index{setHealth@{setHealth}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{setHealth()}{setHealth()}}
+{\footnotesize\ttfamily \label{class_fighter_a4cbf0901c81df9edb077e555e96e5e3b} 
+void Fighter\+::set\+Health (\begin{DoxyParamCaption}\item[{unsigned int \&}]{new\+\_\+health}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new health value for the fighter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+health} & The new health value. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_fighter_af321357e6d09fe71582d89b5ec280007}\index{Fighter@{Fighter}!setName@{setName}}
+\index{setName@{setName}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_fighter_af321357e6d09fe71582d89b5ec280007} 
+void Fighter\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Sets a new name for the fighter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+name} & The new name. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_fighter_a23af81181e0074c92818d90952ac4ab4}\index{Fighter@{Fighter}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Fighter@{Fighter}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily \label{class_fighter_a23af81181e0074c92818d90952ac4ab4} 
+void Fighter\+::take\+Damage (\begin{DoxyParamCaption}\item[{unsigned int}]{damage}{}\end{DoxyParamCaption})}
+
+
+
+Reduces the fighter\textquotesingle{}s health by the given damage amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em damage} & The amount of damage to take. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniillickovaha/\+Documents/\+My\+Game/include/Fighter.\+h\end{DoxyCompactItemize}

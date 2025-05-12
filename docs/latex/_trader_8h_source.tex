@@ -1,0 +1,50 @@
+\doxysection{Trader.\+h}
+\hypertarget{_trader_8h_source}{}\label{_trader_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/Trader.h@{/Users/daniillickovaha/Documents/MyGame/include/Trader.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//Lichkovaha\ Daniil}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//st129351@student.spbu.ru}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//LabWork2}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ TRADER\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ TRADER\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}NPC.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_amulet}{Amulet}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_field}{GameField}};}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_enemy}{Enemy}};}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ forward\ declaration}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_trader_a412f3004c97f46f8e0e01edee636b1f4}{Trader}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_n_p_c_a4d706b0719033eb7acd179a7d09a4c4b}{NPC}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ std::shared\_ptr<Amulet>\ killer\_look;\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::shared\_ptr<Amulet>\ fear\_death;\ \ }
+\DoxyCodeLine{00030\ \ \ \ \ std::shared\_ptr<Amulet>\ madness;\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ std::shared\_ptr<Amulet>\ persev;\ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ std::shared\_ptr<Amulet>\ best\_exp;\ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ std::shared\_ptr<Amulet>\ heal;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00034\ \ \ \ \ std::shared\_ptr<Amulet>\ dash;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<std::shared\_ptr<Amulet>>\ amulets;\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::vector<std::shared\_ptr<Enemy>>\ enemies;\ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}\&\ player;\ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{class_game_field}{GameField}}\&\ field;\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ speak\_flag;\ }
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{class_trader_a412f3004c97f46f8e0e01edee636b1f4}{Trader}}(\mbox{\hyperlink{class_player}{Player}}\&\ p,\ \mbox{\hyperlink{class_game_field}{GameField}}\&\ f);}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \mbox{\hyperlink{class_trader_ab762288b27fa887fb00a8fd7b67881a5}{\string~Trader}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00057\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_trader_ac513e1eb53bf02d8b48b59d20950cb51}{speak}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00065\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ std::string\ \mbox{\hyperlink{class_trader_a210142ba855587a1ac298ee90f717356}{showStore}}();}
+\DoxyCodeLine{00075\ \};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

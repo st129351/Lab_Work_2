@@ -1,0 +1,37 @@
+\doxysection{ADash.\+h}
+\hypertarget{_a_dash_8h_source}{}\label{_a_dash_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/ADash.h@{/Users/daniillickovaha/Documents/MyGame/include/ADash.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ADASH\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ADASH\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}Amulet.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_field}{GameField}};}
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_a_dash_a1937e46eccd21b5cc89911fad6d3f8b8}{ADash}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_amulet_a984eb568d7382ec637e313af35be307e}{Amulet}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{class_game_field}{GameField}}*\ field;\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{struct\ }DashVisual}
+\DoxyCodeLine{00024\ \ \ \ \ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x,\ y;\ }
+\DoxyCodeLine{00026\ \ \ \ \ \};}
+\DoxyCodeLine{00027\ \ \ \ \ std::vector<DashVisual>\ dash\_visual;\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_a_dash_a1937e46eccd21b5cc89911fad6d3f8b8}{ADash}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_a_dash_a7f9e4cd2c32383f55751391608c60e16}{ADash}}(\mbox{\hyperlink{class_game_field}{GameField}}\&\ f);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{class_a_dash_a6b638e8249d402e9c87cd5e5746bfecb}{\string~ADash}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_dash_aa027ff46a2ac50b14806114aed1ae611}{UpdateDashVisual}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_a_dash_a20090a926f63f14fa02697723527882a}{use}}(\mbox{\hyperlink{class_player}{Player}}\&\ player)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00060\ \};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
