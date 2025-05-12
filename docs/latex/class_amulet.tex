@@ -1,0 +1,297 @@
+\doxysection{Amulet Class Reference}
+\hypertarget{class_amulet}{}\label{class_amulet}\index{Amulet@{Amulet}}
+
+
+Base class representing an amulet in the game.  
+
+
+
+
+{\ttfamily \#include $<$Amulet.\+h$>$}
+
+Inheritance diagram for Amulet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.467890cm]{class_amulet}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_amulet_a984eb568d7382ec637e313af35be307e}{Amulet}} (unsigned int cost, bool usage, std\+::string name, std\+::string description, unsigned int slots)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_amulet}{Amulet} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_amulet_af4f708709c473da66b1eeade217e793d}{\texorpdfstring{$\sim$}{\string~}\+Amulet}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_amulet}{Amulet} class. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_amulet_ad4e51f5575201e4d4d21d4d142d59f0f}{use}} (\mbox{\hyperlink{class_player}{Player}} \&player)=0
+\begin{DoxyCompactList}\small\item\em Pure virtual function to use the amulet\textquotesingle{}s effect. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_amulet_a8522b3ce9f974814b2cce79d3c6684e2}{get\+Cost}} () const
+\begin{DoxyCompactList}\small\item\em Gets the cost of the amulet. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_amulet_a211aa82101f2e1d9d22845a2ba2839a1}{get\+Usage}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the amulet can be used. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_amulet_af0f015004747c3c52c3b99c39ed0209e}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the amulet. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_amulet_a1b759d053e1f8ef90ee226088326d09b}{get\+Description}} () const
+\begin{DoxyCompactList}\small\item\em Gets the description of the amulet\textquotesingle{}s effect. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_amulet_a2ac55023de7a79a4e4bbf19576efac2f}{get\+Slots}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of inventory slots the amulet occupies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_amulet_a375c5fc14d512201ff909b8de12f7479}{set\+Slots}} (unsigned int new\+\_\+slots)
+\begin{DoxyCompactList}\small\item\em Sets the number of inventory slots the amulet occupies. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_amulet_ac657b5d0bd8efc7be76b172dfc9c1627}{set\+Cost}} (unsigned int new\+\_\+cost)
+\begin{DoxyCompactList}\small\item\em Sets the cost of the amulet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_amulet_a7cdf0ad66be8aa3e75cee6643242481a}{set\+Usage}} (bool new\+\_\+usage)
+\begin{DoxyCompactList}\small\item\em Sets the usage status of the amulet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_amulet_afca9c6cce9ae54af91ef994dad507c66}{set\+Name}} (std\+::string new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets the name of the amulet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_amulet_a4e4136b97720d11d1668e416e3ceab0b}{set\+Description}} (std\+::string new\+\_\+description)
+\begin{DoxyCompactList}\small\item\em Sets the description of the amulet\textquotesingle{}s effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class representing an amulet in the game. 
+
+
+\begin{DoxyItemize}
+\item Amulets are items that provide special abilities or bonuses to the player. 
+\end{DoxyItemize}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_amulet_a984eb568d7382ec637e313af35be307e}\index{Amulet@{Amulet}!Amulet@{Amulet}}
+\index{Amulet@{Amulet}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{Amulet()}{Amulet()}}
+{\footnotesize\ttfamily \label{class_amulet_a984eb568d7382ec637e313af35be307e} 
+Amulet\+::\+Amulet (\begin{DoxyParamCaption}\item[{unsigned int}]{cost}{, }\item[{bool}]{usage}{, }\item[{std\+::string}]{name}{, }\item[{std\+::string}]{description}{, }\item[{unsigned int}]{slots}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_amulet}{Amulet} class. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em cost} & The cost of the amulet. \\
+\hline
+{\em usage} & Indicates if the amulet can be used. \\
+\hline
+{\em name} & The name of the amulet. \\
+\hline
+{\em description} & The description of the amulet\textquotesingle{}s effect. \\
+\hline
+{\em slots} & The number of inventory slots the amulet occupies. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_af4f708709c473da66b1eeade217e793d}\index{Amulet@{Amulet}!````~Amulet@{\texorpdfstring{$\sim$}{\string~}Amulet}}
+\index{````~Amulet@{\texorpdfstring{$\sim$}{\string~}Amulet}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Amulet()}{\string~Amulet()}}
+{\footnotesize\ttfamily \label{class_amulet_af4f708709c473da66b1eeade217e793d} 
+virtual Amulet\+::\texorpdfstring{$\sim$}{\string~}\+Amulet (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for the \doxylink{class_amulet}{Amulet} class. 
+
+
+\begin{DoxyItemize}
+\item Ensures proper cleanup of derived class objects. 
+\end{DoxyItemize}
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_amulet_a8522b3ce9f974814b2cce79d3c6684e2}\index{Amulet@{Amulet}!getCost@{getCost}}
+\index{getCost@{getCost}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{getCost()}{getCost()}}
+{\footnotesize\ttfamily \label{class_amulet_a8522b3ce9f974814b2cce79d3c6684e2} 
+unsigned int Amulet\+::get\+Cost (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the cost of the amulet. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+unsigned int The cost of the amulet. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_a1b759d053e1f8ef90ee226088326d09b}\index{Amulet@{Amulet}!getDescription@{getDescription}}
+\index{getDescription@{getDescription}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
+{\footnotesize\ttfamily \label{class_amulet_a1b759d053e1f8ef90ee226088326d09b} 
+std\+::string Amulet\+::get\+Description (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the description of the amulet\textquotesingle{}s effect. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+std\+::string The description of the amulet. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_af0f015004747c3c52c3b99c39ed0209e}\index{Amulet@{Amulet}!getName@{getName}}
+\index{getName@{getName}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_amulet_af0f015004747c3c52c3b99c39ed0209e} 
+std\+::string Amulet\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the amulet. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+std\+::string The name of the amulet. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_a2ac55023de7a79a4e4bbf19576efac2f}\index{Amulet@{Amulet}!getSlots@{getSlots}}
+\index{getSlots@{getSlots}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{getSlots()}{getSlots()}}
+{\footnotesize\ttfamily \label{class_amulet_a2ac55023de7a79a4e4bbf19576efac2f} 
+unsigned int Amulet\+::get\+Slots (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of inventory slots the amulet occupies. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+unsigned int The number of slots. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_a211aa82101f2e1d9d22845a2ba2839a1}\index{Amulet@{Amulet}!getUsage@{getUsage}}
+\index{getUsage@{getUsage}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{getUsage()}{getUsage()}}
+{\footnotesize\ttfamily \label{class_amulet_a211aa82101f2e1d9d22845a2ba2839a1} 
+bool Amulet\+::get\+Usage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the amulet can be used. 
+
+
+\begin{DoxyItemize}
+\item \begin{DoxyReturn}{Returns}
+bool True if the amulet can be used, false otherwise. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_ac657b5d0bd8efc7be76b172dfc9c1627}\index{Amulet@{Amulet}!setCost@{setCost}}
+\index{setCost@{setCost}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{setCost()}{setCost()}}
+{\footnotesize\ttfamily \label{class_amulet_ac657b5d0bd8efc7be76b172dfc9c1627} 
+void Amulet\+::set\+Cost (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+cost}{}\end{DoxyParamCaption})}
+
+
+
+Sets the cost of the amulet. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+cost} & The new cost of the amulet. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_a4e4136b97720d11d1668e416e3ceab0b}\index{Amulet@{Amulet}!setDescription@{setDescription}}
+\index{setDescription@{setDescription}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{setDescription()}{setDescription()}}
+{\footnotesize\ttfamily \label{class_amulet_a4e4136b97720d11d1668e416e3ceab0b} 
+void Amulet\+::set\+Description (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+\_\+description}{}\end{DoxyParamCaption})}
+
+
+
+Sets the description of the amulet\textquotesingle{}s effect. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+description} & The new description of the amulet. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_afca9c6cce9ae54af91ef994dad507c66}\index{Amulet@{Amulet}!setName@{setName}}
+\index{setName@{setName}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_amulet_afca9c6cce9ae54af91ef994dad507c66} 
+void Amulet\+::set\+Name (\begin{DoxyParamCaption}\item[{std\+::string}]{new\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the name of the amulet. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+name} & The new name of the amulet. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_a375c5fc14d512201ff909b8de12f7479}\index{Amulet@{Amulet}!setSlots@{setSlots}}
+\index{setSlots@{setSlots}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{setSlots()}{setSlots()}}
+{\footnotesize\ttfamily \label{class_amulet_a375c5fc14d512201ff909b8de12f7479} 
+void Amulet\+::set\+Slots (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+slots}{}\end{DoxyParamCaption})}
+
+
+
+Sets the number of inventory slots the amulet occupies. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+slots} & The new number of slots. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_a7cdf0ad66be8aa3e75cee6643242481a}\index{Amulet@{Amulet}!setUsage@{setUsage}}
+\index{setUsage@{setUsage}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{setUsage()}{setUsage()}}
+{\footnotesize\ttfamily \label{class_amulet_a7cdf0ad66be8aa3e75cee6643242481a} 
+void Amulet\+::set\+Usage (\begin{DoxyParamCaption}\item[{bool}]{new\+\_\+usage}{}\end{DoxyParamCaption})}
+
+
+
+Sets the usage status of the amulet. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+usage} & The new usage status (true if usable, false otherwise). \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{class_amulet_ad4e51f5575201e4d4d21d4d142d59f0f}\index{Amulet@{Amulet}!use@{use}}
+\index{use@{use}!Amulet@{Amulet}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily \label{class_amulet_ad4e51f5575201e4d4d21d4d142d59f0f} 
+virtual void Amulet\+::use (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{player}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Pure virtual function to use the amulet\textquotesingle{}s effect. 
+
+
+\begin{DoxyItemize}
+\item Must be implemented by derived classes.
+\item 
+\begin{DoxyParams}{Parameters}
+{\em player} & Reference to the \doxylink{class_player}{Player} object. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implemented in \mbox{\hyperlink{class_a_dash_a20090a926f63f14fa02697723527882a}{ADash}}, \mbox{\hyperlink{class_a_fear_of_death_a1f7347cddf4a7805602e9c4923c5ba85}{AFear\+Of\+Death}}, \mbox{\hyperlink{class_a_heal_a361d31c83fce95a7b57055bf468fc657}{AHeal}}, \mbox{\hyperlink{class_a_killer_look_a115acf548d51df79be7525250310a1fd}{AKiller\+Look}}, \mbox{\hyperlink{class_a_madness_a293f6bc29bacc98f74111da75969d195}{AMadness}}, \mbox{\hyperlink{class_a_perseverance_afb63f4f25b36b8404ffacdb502c43c03}{APerseverance}}, and \mbox{\hyperlink{class_best_exp_ad412d35d1411497b62cf3a9a84210bd9}{Best\+Exp}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniillickovaha/\+Documents/\+My\+Game/include/Amulet.\+h\end{DoxyCompactItemize}

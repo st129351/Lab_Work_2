@@ -1,0 +1,55 @@
+\doxysection{Game.\+h}
+\hypertarget{_game_8h_source}{}\label{_game_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/Game.h@{/Users/daniillickovaha/Documents/MyGame/include/Game.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//Lichkovaha\ Daniil}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//st129351@student.spbu.ru}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//LabWork2}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ GAME\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ GAME\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <gtest/gtest.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <cstdio>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <termios.h>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}Player.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}GameField.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_yard_dragon}{YardDragon}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_game_a4378a42e526f955b61495769ec258921}{Game}}}
+\DoxyCodeLine{00026\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}\ player;\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::shared\_ptr<YardDragon>\ dragon;\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{class_game_field}{GameField}}\ field;\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ input;\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ flag;\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ completeLevel;\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ endGame;\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_game_a4378a42e526f955b61495769ec258921}{Game}}(\mbox{\hyperlink{class_player}{Player}}\&\ p);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{class_game_a3d09cd0b68ef69107d36360ca903e023}{\string~Game}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a6a42a6cb1652eb44faafe3d616cc9b74}{enableRawMode}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ad8f6eee6f0fac099c07a65bf37d2fb69}{disableRawMode}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a3fa1fd5cde5e8e3cd7def3c8e1ec9ac7}{start\_game}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a0fef43fe64b6f211060ef8daec53c954}{startVillage}}();}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_ad31236e67b5ddcaa9640d2e7a13235fb}{Level\_1}}();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a7ad7a3e612e40de6ed68a3c55d26b0bf}{Level\_2}}();}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_game_a75f4775796e49510ceee2d5dceb0a5ac}{Level\_3}}();}
+\DoxyCodeLine{00099\ \};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

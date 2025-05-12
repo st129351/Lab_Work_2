@@ -1,0 +1,58 @@
+\doxysection{Amulet.\+h}
+\hypertarget{_amulet_8h_source}{}\label{_amulet_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/Amulet.h@{/Users/daniillickovaha/Documents/MyGame/include/Amulet.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//Lichkovaha\ Daniil}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//st129351@student.spbu.ru}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//LabWork2}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ AMULET\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ AMULET\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Enemy.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_amulet_a984eb568d7382ec637e313af35be307e}{Amulet}}}
+\DoxyCodeLine{00019\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ cost;\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ usage;\ }
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ name;\ }
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ description;\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ slots;\ }
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_amulet_a984eb568d7382ec637e313af35be307e}{Amulet}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ cost,\ \textcolor{keywordtype}{bool}\ usage,\ std::string\ name,\ std::string\ description,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ slots);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_amulet_af4f708709c473da66b1eeade217e793d}{\string~Amulet}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_amulet_ad4e51f5575201e4d4d21d4d142d59f0f}{use}}(\mbox{\hyperlink{class_player}{Player}}\&\ player)\ =\ 0;}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ redefinition\ in\ different\ amulets}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ =\ 0\ -\/\ pure\ virtual\ func\ (not\ realise\ in\ base\ class)}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_amulet_a8522b3ce9f974814b2cce79d3c6684e2}{getCost}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_amulet_a211aa82101f2e1d9d22845a2ba2839a1}{getUsage}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00069\ \ \ \ \ std::string\ \mbox{\hyperlink{class_amulet_af0f015004747c3c52c3b99c39ed0209e}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \ \ \ \ std::string\ \mbox{\hyperlink{class_amulet_a1b759d053e1f8ef90ee226088326d09b}{getDescription}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_amulet_a2ac55023de7a79a4e4bbf19576efac2f}{getSlots}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_amulet_a375c5fc14d512201ff909b8de12f7479}{setSlots}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ new\_slots);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_amulet_ac657b5d0bd8efc7be76b172dfc9c1627}{setCost}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ new\_cost);}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_amulet_a7cdf0ad66be8aa3e75cee6643242481a}{setUsage}}(\textcolor{keywordtype}{bool}\ new\_usage);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_amulet_afca9c6cce9ae54af91ef994dad507c66}{setName}}(std::string\ new\_name);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_amulet_a4e4136b97720d11d1668e416e3ceab0b}{setDescription}}(std::string\ new\_description);}
+\DoxyCodeLine{00112\ \};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

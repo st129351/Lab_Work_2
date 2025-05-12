@@ -1,0 +1,569 @@
+\doxysection{Player Class Reference}
+\hypertarget{class_player}{}\label{class_player}\index{Player@{Player}}
+
+
+Class representing the player character in the game.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+Inheritance diagram for Player\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_player}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_player_af5aaea393030f959d568c806ca9100ca}{Player}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_player}{Player} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a9f74889cf8c6ae77b58e36b8223b975d}{on\+Death}} () override
+\begin{DoxyCompactList}\small\item\em Handles player\textquotesingle{}s death event. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a5bda3bad89f797546360636deb154fbb}{level\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Increases player\textquotesingle{}s level if possible. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_player_a06ceb20eb92ce69709078dc9cb484f44}{show\+Inventory}} ()
+\begin{DoxyCompactList}\small\item\em Displays player\textquotesingle{}s inventory contents. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ae68bf5bd8977d23a155c2c223eb43209}{Buy}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_n_p_c}{NPC}} $>$ $>$ npc\+\_\+characters, char symb, \mbox{\hyperlink{class_game_field}{Game\+Field}} \&field)
+\begin{DoxyCompactList}\small\item\em Purchases an item from an \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a96010492f472886b8a1d2c0dca90dd5c}{NPCSpeak}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_n_p_c}{NPC}} $>$ $>$ npc\+\_\+characters)
+\begin{DoxyCompactList}\small\item\em Initiates dialogue with nearby NPCs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ac3f1c3121af53b85772ab5dd6191c6cb}{attack\+Area}} (\mbox{\hyperlink{class_game_field}{Game\+Field}} \&field, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $>$ $>$ \&enemies)
+\begin{DoxyCompactList}\small\item\em Performs area attack around the player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_aa472cb1884cd1234756b5a86804c8311}{Update\+Attack\+Visual}} (\mbox{\hyperlink{class_game_field}{Game\+Field}} \&field, std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $>$ $>$ \&enemies)
+\begin{DoxyCompactList}\small\item\em Updates attack visual effects on the game field. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_player_a9f075bc92073ab822074945d82c2a4dd}{get\+Exp}} () const
+\begin{DoxyCompactList}\small\item\em Gets current experience points. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_player_afefb64b3b84775f06b6992f0ce84b8c5}{get\+Gold}} () const
+\begin{DoxyCompactList}\small\item\em Gets current gold amount. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_player_a5c4ea0bf008af9fddabe4486e6784fbe}{get\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Gets current player level. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_player_a759cb8f02ca36406cb57a1a77afda45a}{get\+Max\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Gets maximum player level. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets player\textquotesingle{}s name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_a04b43733a179589276cfe46ea83b438a}{get\+X\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Gets X-\/coordinate position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_player_a4a1c1717692b5b92f9de04b4332e015c}{get\+Y\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Gets Y-\/coordinate position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a021a94a6b72a3ecb254cd2b026df02fd}{get\+Persev\+Flag}} () const
+\begin{DoxyCompactList}\small\item\em Checks if Perseverance amulet is active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a772492080f6500a408451c9cde177774}{get\+Best\+Exp\+Flag}} () const
+\begin{DoxyCompactList}\small\item\em Checks if \doxylink{class_best_exp}{Best\+Exp} amulet is active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_abf99bdd55f6845e41af25bc7e9c6c4a9}{get\+Heal\+Flag}} () const
+\begin{DoxyCompactList}\small\item\em Checks if Heal amulet is active. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_player_a278054d3ab5327ca1eac45e0fb29a2dd}{get\+Dash\+Flag}} () const
+\begin{DoxyCompactList}\small\item\em Checks if Dash amulet is active. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_perseverance}{APerseverance}} $>$ \mbox{\hyperlink{class_player_a91d65e87e50ef6cd7c5ef44687787118}{get\+Persev}} ()
+\begin{DoxyCompactList}\small\item\em Gets Perseverance amulet. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_best_exp}{Best\+Exp}} $>$ \mbox{\hyperlink{class_player_ad7e2d4d1b84e148d93ee4b6e65d66fc8}{get\+Best\+Exp}} ()
+\begin{DoxyCompactList}\small\item\em Gets \doxylink{class_best_exp}{Best\+Exp} amulet. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_heal}{AHeal}} $>$ \mbox{\hyperlink{class_player_a6c3686dc988007bf69e1d5dea58c5ddc}{get\+Heal}} ()
+\begin{DoxyCompactList}\small\item\em Gets Heal amulet. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_dash}{ADash}} $>$ \mbox{\hyperlink{class_player_a6d7619fc7d8e5f7cdb08d2d63c5a881e}{get\+Dash}} ()
+\begin{DoxyCompactList}\small\item\em Gets Dash amulet. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_madness}{AMadness}} $>$ \mbox{\hyperlink{class_player_a622a9b0eb4367d39d38b3fd63ee5a546}{get\+Madness}} ()
+\begin{DoxyCompactList}\small\item\em Gets Madness amulet. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_killer_look}{AKiller\+Look}} $>$ \mbox{\hyperlink{class_player_ae5dd1741a744cbe1f11a2a27c789bbd4}{get\+Killer\+Look}} ()
+\begin{DoxyCompactList}\small\item\em Gets Killer\+Look amulet. \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_fear_of_death}{AFear\+Of\+Death}} $>$ \mbox{\hyperlink{class_player_ac6392fcb0a514f026d2a508f3031591b}{get\+Fear\+Of\+Death}} ()
+\begin{DoxyCompactList}\small\item\em Gets Fear\+Of\+Death amulet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_aa15b682ea043f47a0e1adac729a88a25}{set\+Exp}} (unsigned int new\+\_\+exp)
+\begin{DoxyCompactList}\small\item\em Sets new experience value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3729b7130c31e9885130c2b1c88f742c}{set\+Gold}} (unsigned int new\+\_\+gold)
+\begin{DoxyCompactList}\small\item\em Sets new gold amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_abc2047a15dad60836ba62bb8a2277bcc}{set\+Level}} (unsigned int new\+\_\+level)
+\begin{DoxyCompactList}\small\item\em Sets new player level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ab3a03f7376212fb6a20ccefecd987c05}{set\+Name}} (const std\+::string \&new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets new player name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_a3ea18de2f0985306ba4d140a36f0e8a0}{set\+X\+\_\+pos}} (unsigned int new\+\_\+x\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Sets new X-\/coordinate position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_player_ad5a4a4e2906d59b2fb08d40be2f33499}{set\+Y\+\_\+pos}} (unsigned int new\+\_\+y\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Sets new Y-\/coordinate position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_fighter}{Fighter}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fighter_a2fc1decdc036984250c4e000cbbf82bc}{Fighter}} (const std\+::string \&name, unsigned int health, unsigned int damage)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_fighter}{Fighter} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_fighter_abd5c2c5ff458a5c40af2edb248458437}{\texorpdfstring{$\sim$}{\string~}\+Fighter}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_fighter}{Fighter} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a7e12810e544d1566251a4444b89af25c}{attack}} (\mbox{\hyperlink{class_fighter}{Fighter}} \&target)
+\begin{DoxyCompactList}\small\item\em Performs an attack on the target fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a23af81181e0074c92818d90952ac4ab4}{take\+Damage}} (unsigned int damage)
+\begin{DoxyCompactList}\small\item\em Reduces the fighter\textquotesingle{}s health by the given damage amount. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_fighter_a346ed5487b7ea943300372d0513bff09}{is\+Alive}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the fighter is still alive. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_fighter_adc56e1cb2f6cda4e9c844f9635fd30f9}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the fighter. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_fighter_a1a6fdef761ec1bb1fcfd4aa550ac9429}{get\+Damage}} () const
+\begin{DoxyCompactList}\small\item\em Gets the attack damage of the fighter. \end{DoxyCompactList}\item 
+unsigned int \mbox{\hyperlink{class_fighter_adfbaa0aacdfd8ec8a4bdb57ea6dce3d5}{get\+Health}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current health of the fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a4cbf0901c81df9edb077e555e96e5e3b}{set\+Health}} (unsigned int \&new\+\_\+health)
+\begin{DoxyCompactList}\small\item\em Sets a new health value for the fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_a59c031d7142feea08fd0b3f092ea5e03}{set\+Damage}} (unsigned int \&new\+\_\+damage)
+\begin{DoxyCompactList}\small\item\em Sets a new attack damage value for the fighter. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_fighter_af321357e6d09fe71582d89b5ec280007}{set\+Name}} (const std\+::string \&new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets a new name for the fighter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing the player character in the game. 
+
+\doxylink{class_player}{Player} inherits from the \doxylink{class_fighter}{Fighter} base class and implements all player-\/specific functionality, including movement, combat, inventory management, and interaction with NPCs and items. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_player_af5aaea393030f959d568c806ca9100ca}\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily \label{class_player_af5aaea393030f959d568c806ca9100ca} 
+Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_player}{Player} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \doxylink{class_player}{Player}\textquotesingle{}s name \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_player_ac3f1c3121af53b85772ab5dd6191c6cb}\index{Player@{Player}!attackArea@{attackArea}}
+\index{attackArea@{attackArea}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{attackArea()}{attackArea()}}
+{\footnotesize\ttfamily \label{class_player_ac3f1c3121af53b85772ab5dd6191c6cb} 
+void Player\+::attack\+Area (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_field}{Game\+Field}} \&}]{field}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $>$ $>$ \&}]{enemies}{}\end{DoxyParamCaption})}
+
+
+
+Performs area attack around the player. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & Reference to the game field \\
+\hline
+{\em enemies} & List of enemies in the game \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_ae68bf5bd8977d23a155c2c223eb43209}\index{Player@{Player}!Buy@{Buy}}
+\index{Buy@{Buy}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Buy()}{Buy()}}
+{\footnotesize\ttfamily \label{class_player_ae68bf5bd8977d23a155c2c223eb43209} 
+void Player\+::\+Buy (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_n_p_c}{NPC}} $>$ $>$}]{npc\+\_\+characters}{, }\item[{char}]{symb}{, }\item[{\mbox{\hyperlink{class_game_field}{Game\+Field}} \&}]{field}{}\end{DoxyParamCaption})}
+
+
+
+Purchases an item from an \doxylink{class_n_p_c}{NPC}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em npc\+\_\+characters} & List of NPCs in the game \\
+\hline
+{\em symb} & Character representing the item to buy \\
+\hline
+{\em field} & Reference to the game field \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_ad7e2d4d1b84e148d93ee4b6e65d66fc8}\index{Player@{Player}!getBestExp@{getBestExp}}
+\index{getBestExp@{getBestExp}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getBestExp()}{getBestExp()}}
+{\footnotesize\ttfamily \label{class_player_ad7e2d4d1b84e148d93ee4b6e65d66fc8} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_best_exp}{Best\+Exp}} $>$ Player\+::get\+Best\+Exp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets \doxylink{class_best_exp}{Best\+Exp} amulet. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+Best\+Exp$>$ Pointer to amulet 
+\end{DoxyReturn}
+\Hypertarget{class_player_a772492080f6500a408451c9cde177774}\index{Player@{Player}!getBestExpFlag@{getBestExpFlag}}
+\index{getBestExpFlag@{getBestExpFlag}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getBestExpFlag()}{getBestExpFlag()}}
+{\footnotesize\ttfamily \label{class_player_a772492080f6500a408451c9cde177774} 
+bool Player\+::get\+Best\+Exp\+Flag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if \doxylink{class_best_exp}{Best\+Exp} amulet is active. 
+
+\begin{DoxyReturn}{Returns}
+bool True if active, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_player_a6d7619fc7d8e5f7cdb08d2d63c5a881e}\index{Player@{Player}!getDash@{getDash}}
+\index{getDash@{getDash}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getDash()}{getDash()}}
+{\footnotesize\ttfamily \label{class_player_a6d7619fc7d8e5f7cdb08d2d63c5a881e} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_dash}{ADash}} $>$ Player\+::get\+Dash (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets Dash amulet. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+ADash$>$ Pointer to amulet 
+\end{DoxyReturn}
+\Hypertarget{class_player_a278054d3ab5327ca1eac45e0fb29a2dd}\index{Player@{Player}!getDashFlag@{getDashFlag}}
+\index{getDashFlag@{getDashFlag}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getDashFlag()}{getDashFlag()}}
+{\footnotesize\ttfamily \label{class_player_a278054d3ab5327ca1eac45e0fb29a2dd} 
+bool Player\+::get\+Dash\+Flag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if Dash amulet is active. 
+
+\begin{DoxyReturn}{Returns}
+bool True if active, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_player_a9f075bc92073ab822074945d82c2a4dd}\index{Player@{Player}!getExp@{getExp}}
+\index{getExp@{getExp}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getExp()}{getExp()}}
+{\footnotesize\ttfamily \label{class_player_a9f075bc92073ab822074945d82c2a4dd} 
+unsigned int Player\+::get\+Exp (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets current experience points. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int Current experience 
+\end{DoxyReturn}
+\Hypertarget{class_player_ac6392fcb0a514f026d2a508f3031591b}\index{Player@{Player}!getFearOfDeath@{getFearOfDeath}}
+\index{getFearOfDeath@{getFearOfDeath}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getFearOfDeath()}{getFearOfDeath()}}
+{\footnotesize\ttfamily \label{class_player_ac6392fcb0a514f026d2a508f3031591b} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_fear_of_death}{AFear\+Of\+Death}} $>$ Player\+::get\+Fear\+Of\+Death (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets Fear\+Of\+Death amulet. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+AFear\+Of\+Death$>$ Pointer to amulet 
+\end{DoxyReturn}
+\Hypertarget{class_player_afefb64b3b84775f06b6992f0ce84b8c5}\index{Player@{Player}!getGold@{getGold}}
+\index{getGold@{getGold}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getGold()}{getGold()}}
+{\footnotesize\ttfamily \label{class_player_afefb64b3b84775f06b6992f0ce84b8c5} 
+unsigned int Player\+::get\+Gold (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets current gold amount. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int Current gold 
+\end{DoxyReturn}
+\Hypertarget{class_player_a6c3686dc988007bf69e1d5dea58c5ddc}\index{Player@{Player}!getHeal@{getHeal}}
+\index{getHeal@{getHeal}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getHeal()}{getHeal()}}
+{\footnotesize\ttfamily \label{class_player_a6c3686dc988007bf69e1d5dea58c5ddc} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_heal}{AHeal}} $>$ Player\+::get\+Heal (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets Heal amulet. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+AHeal$>$ Pointer to amulet 
+\end{DoxyReturn}
+\Hypertarget{class_player_abf99bdd55f6845e41af25bc7e9c6c4a9}\index{Player@{Player}!getHealFlag@{getHealFlag}}
+\index{getHealFlag@{getHealFlag}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getHealFlag()}{getHealFlag()}}
+{\footnotesize\ttfamily \label{class_player_abf99bdd55f6845e41af25bc7e9c6c4a9} 
+bool Player\+::get\+Heal\+Flag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if Heal amulet is active. 
+
+\begin{DoxyReturn}{Returns}
+bool True if active, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_player_ae5dd1741a744cbe1f11a2a27c789bbd4}\index{Player@{Player}!getKillerLook@{getKillerLook}}
+\index{getKillerLook@{getKillerLook}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getKillerLook()}{getKillerLook()}}
+{\footnotesize\ttfamily \label{class_player_ae5dd1741a744cbe1f11a2a27c789bbd4} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_killer_look}{AKiller\+Look}} $>$ Player\+::get\+Killer\+Look (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets Killer\+Look amulet. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+AKiller\+Look$>$ Pointer to amulet 
+\end{DoxyReturn}
+\Hypertarget{class_player_a5c4ea0bf008af9fddabe4486e6784fbe}\index{Player@{Player}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily \label{class_player_a5c4ea0bf008af9fddabe4486e6784fbe} 
+unsigned int Player\+::get\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets current player level. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int Current level 
+\end{DoxyReturn}
+\Hypertarget{class_player_a622a9b0eb4367d39d38b3fd63ee5a546}\index{Player@{Player}!getMadness@{getMadness}}
+\index{getMadness@{getMadness}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getMadness()}{getMadness()}}
+{\footnotesize\ttfamily \label{class_player_a622a9b0eb4367d39d38b3fd63ee5a546} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_madness}{AMadness}} $>$ Player\+::get\+Madness (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets Madness amulet. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+AMadness$>$ Pointer to amulet 
+\end{DoxyReturn}
+\Hypertarget{class_player_a759cb8f02ca36406cb57a1a77afda45a}\index{Player@{Player}!getMaxLevel@{getMaxLevel}}
+\index{getMaxLevel@{getMaxLevel}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getMaxLevel()}{getMaxLevel()}}
+{\footnotesize\ttfamily \label{class_player_a759cb8f02ca36406cb57a1a77afda45a} 
+unsigned int Player\+::get\+Max\+Level (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets maximum player level. 
+
+\begin{DoxyReturn}{Returns}
+unsigned int Maximum level 
+\end{DoxyReturn}
+\Hypertarget{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85}\index{Player@{Player}!getName@{getName}}
+\index{getName@{getName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_player_a73e4ff2d70e62ca7e3be1d9b4ad9de85} 
+std\+::string Player\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets player\textquotesingle{}s name. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string \doxylink{class_player}{Player}\textquotesingle{}s name 
+\end{DoxyReturn}
+\Hypertarget{class_player_a91d65e87e50ef6cd7c5ef44687787118}\index{Player@{Player}!getPersev@{getPersev}}
+\index{getPersev@{getPersev}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getPersev()}{getPersev()}}
+{\footnotesize\ttfamily \label{class_player_a91d65e87e50ef6cd7c5ef44687787118} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_a_perseverance}{APerseverance}} $>$ Player\+::get\+Persev (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets Perseverance amulet. 
+
+\begin{DoxyReturn}{Returns}
+std\+::shared\+\_\+ptr$<$\+APerseverance$>$ Pointer to amulet 
+\end{DoxyReturn}
+\Hypertarget{class_player_a021a94a6b72a3ecb254cd2b026df02fd}\index{Player@{Player}!getPersevFlag@{getPersevFlag}}
+\index{getPersevFlag@{getPersevFlag}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getPersevFlag()}{getPersevFlag()}}
+{\footnotesize\ttfamily \label{class_player_a021a94a6b72a3ecb254cd2b026df02fd} 
+bool Player\+::get\+Persev\+Flag (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if Perseverance amulet is active. 
+
+\begin{DoxyReturn}{Returns}
+bool True if active, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{class_player_a04b43733a179589276cfe46ea83b438a}\index{Player@{Player}!getX\_pos@{getX\_pos}}
+\index{getX\_pos@{getX\_pos}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getX\_pos()}{getX\_pos()}}
+{\footnotesize\ttfamily \label{class_player_a04b43733a179589276cfe46ea83b438a} 
+int Player\+::get\+X\+\_\+pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets X-\/coordinate position. 
+
+\begin{DoxyReturn}{Returns}
+int X position 
+\end{DoxyReturn}
+\Hypertarget{class_player_a4a1c1717692b5b92f9de04b4332e015c}\index{Player@{Player}!getY\_pos@{getY\_pos}}
+\index{getY\_pos@{getY\_pos}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getY\_pos()}{getY\_pos()}}
+{\footnotesize\ttfamily \label{class_player_a4a1c1717692b5b92f9de04b4332e015c} 
+int Player\+::get\+Y\+\_\+pos (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Gets Y-\/coordinate position. 
+
+\begin{DoxyReturn}{Returns}
+int Y position 
+\end{DoxyReturn}
+\Hypertarget{class_player_a5bda3bad89f797546360636deb154fbb}\index{Player@{Player}!levelUp@{levelUp}}
+\index{levelUp@{levelUp}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{levelUp()}{levelUp()}}
+{\footnotesize\ttfamily \label{class_player_a5bda3bad89f797546360636deb154fbb} 
+void Player\+::level\+Up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Increases player\textquotesingle{}s level if possible. 
+
+Increases level, resets experience, and boosts stats if not at max level. \Hypertarget{class_player_a96010492f472886b8a1d2c0dca90dd5c}\index{Player@{Player}!NPCSpeak@{NPCSpeak}}
+\index{NPCSpeak@{NPCSpeak}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{NPCSpeak()}{NPCSpeak()}}
+{\footnotesize\ttfamily \label{class_player_a96010492f472886b8a1d2c0dca90dd5c} 
+void Player\+::\+NPCSpeak (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_n_p_c}{NPC}} $>$ $>$}]{npc\+\_\+characters}{}\end{DoxyParamCaption})}
+
+
+
+Initiates dialogue with nearby NPCs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em npc\+\_\+characters} & List of NPCs in the game \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a9f74889cf8c6ae77b58e36b8223b975d}\index{Player@{Player}!onDeath@{onDeath}}
+\index{onDeath@{onDeath}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{onDeath()}{onDeath()}}
+{\footnotesize\ttfamily \label{class_player_a9f74889cf8c6ae77b58e36b8223b975d} 
+void Player\+::on\+Death (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Handles player\textquotesingle{}s death event. 
+
+Overridden method from the \doxylink{class_fighter}{Fighter} base class. Sets health to 0 and displays game over message. 
+
+Implements \mbox{\hyperlink{class_fighter_a0a3b1b080d5a9d0fa40c9cffa9ff5011}{Fighter}}.
+
+\Hypertarget{class_player_aa15b682ea043f47a0e1adac729a88a25}\index{Player@{Player}!setExp@{setExp}}
+\index{setExp@{setExp}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setExp()}{setExp()}}
+{\footnotesize\ttfamily \label{class_player_aa15b682ea043f47a0e1adac729a88a25} 
+void Player\+::set\+Exp (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+exp}{}\end{DoxyParamCaption})}
+
+
+
+Sets new experience value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+exp} & New experience value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a3729b7130c31e9885130c2b1c88f742c}\index{Player@{Player}!setGold@{setGold}}
+\index{setGold@{setGold}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setGold()}{setGold()}}
+{\footnotesize\ttfamily \label{class_player_a3729b7130c31e9885130c2b1c88f742c} 
+void Player\+::set\+Gold (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+gold}{}\end{DoxyParamCaption})}
+
+
+
+Sets new gold amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+gold} & New gold value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_abc2047a15dad60836ba62bb8a2277bcc}\index{Player@{Player}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily \label{class_player_abc2047a15dad60836ba62bb8a2277bcc} 
+void Player\+::set\+Level (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+level}{}\end{DoxyParamCaption})}
+
+
+
+Sets new player level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+level} & New level value \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_ab3a03f7376212fb6a20ccefecd987c05}\index{Player@{Player}!setName@{setName}}
+\index{setName@{setName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{class_player_ab3a03f7376212fb6a20ccefecd987c05} 
+void Player\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{new\+\_\+name}{}\end{DoxyParamCaption})}
+
+
+
+Sets new player name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+name} & New name \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a3ea18de2f0985306ba4d140a36f0e8a0}\index{Player@{Player}!setX\_pos@{setX\_pos}}
+\index{setX\_pos@{setX\_pos}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setX\_pos()}{setX\_pos()}}
+{\footnotesize\ttfamily \label{class_player_a3ea18de2f0985306ba4d140a36f0e8a0} 
+void Player\+::set\+X\+\_\+pos (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+x\+\_\+pos}{}\end{DoxyParamCaption})}
+
+
+
+Sets new X-\/coordinate position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+x\+\_\+pos} & New X position \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_ad5a4a4e2906d59b2fb08d40be2f33499}\index{Player@{Player}!setY\_pos@{setY\_pos}}
+\index{setY\_pos@{setY\_pos}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setY\_pos()}{setY\_pos()}}
+{\footnotesize\ttfamily \label{class_player_ad5a4a4e2906d59b2fb08d40be2f33499} 
+void Player\+::set\+Y\+\_\+pos (\begin{DoxyParamCaption}\item[{unsigned int}]{new\+\_\+y\+\_\+pos}{}\end{DoxyParamCaption})}
+
+
+
+Sets new Y-\/coordinate position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+y\+\_\+pos} & New Y position \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_player_a06ceb20eb92ce69709078dc9cb484f44}\index{Player@{Player}!showInventory@{showInventory}}
+\index{showInventory@{showInventory}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{showInventory()}{showInventory()}}
+{\footnotesize\ttfamily \label{class_player_a06ceb20eb92ce69709078dc9cb484f44} 
+std\+::string Player\+::show\+Inventory (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays player\textquotesingle{}s inventory contents. 
+
+\begin{DoxyReturn}{Returns}
+std\+::string Formatted inventory information 
+\end{DoxyReturn}
+\Hypertarget{class_player_aa472cb1884cd1234756b5a86804c8311}\index{Player@{Player}!UpdateAttackVisual@{UpdateAttackVisual}}
+\index{UpdateAttackVisual@{UpdateAttackVisual}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{UpdateAttackVisual()}{UpdateAttackVisual()}}
+{\footnotesize\ttfamily \label{class_player_aa472cb1884cd1234756b5a86804c8311} 
+void Player\+::\+Update\+Attack\+Visual (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_field}{Game\+Field}} \&}]{field}{, }\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_enemy}{Enemy}} $>$ $>$ \&}]{enemies}{}\end{DoxyParamCaption})}
+
+
+
+Updates attack visual effects on the game field. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em field} & Reference to the game field \\
+\hline
+{\em enemies} & List of enemies in the game \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniillickovaha/\+Documents/\+My\+Game/include/Player.\+h\end{DoxyCompactItemize}

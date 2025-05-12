@@ -1,3 +1,6 @@
+//Lichkovaha Daniil
+//st129351@student.spbu.ru
+//LabWork2
 #include "Fighter.h"
 
 Fighter::Fighter(const std::string& name, unsigned int health, unsigned int damage)
@@ -44,6 +47,11 @@ bool Fighter::isAlive() const
 
 void Fighter::takeDamage(unsigned int damage)
 {
+    if (health == 0)
+    {
+        return;
+    }
+    
     if (damage >= health)
     {
         health = 0;

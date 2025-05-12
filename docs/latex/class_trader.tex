@@ -1,0 +1,120 @@
+\doxysection{Trader Class Reference}
+\hypertarget{class_trader}{}\label{class_trader}\index{Trader@{Trader}}
+
+
+Class representing the trader \doxylink{class_n_p_c}{NPC} in the game.  
+
+
+
+
+{\ttfamily \#include $<$Trader.\+h$>$}
+
+Inheritance diagram for Trader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_trader}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_trader_a412f3004c97f46f8e0e01edee636b1f4}{Trader}} (\mbox{\hyperlink{class_player}{Player}} \&p, \mbox{\hyperlink{class_game_field}{Game\+Field}} \&f)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{class_trader}{Trader} class. \end{DoxyCompactList}\item 
+\Hypertarget{class_trader_ab762288b27fa887fb00a8fd7b67881a5}\label{class_trader_ab762288b27fa887fb00a8fd7b67881a5} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Trader} () override
+\begin{DoxyCompactList}\small\item\em Destructor for \doxylink{class_trader}{Trader} class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_trader_ac513e1eb53bf02d8b48b59d20950cb51}{speak}} () override
+\begin{DoxyCompactList}\small\item\em Initiates dialogue with the trader. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_trader_a210142ba855587a1ac298ee90f717356}{show\+Store}} ()
+\begin{DoxyCompactList}\small\item\em Displays the trader\textquotesingle{}s store interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_n_p_c}{NPC}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_n_p_c_a4d706b0719033eb7acd179a7d09a4c4b}{NPC}} (std\+::string name, std\+::string description)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_n_p_c}{NPC} class. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{class_n_p_c_a29f99d778a729ff9efcde5dfa6604cae}{\texorpdfstring{$\sim$}{\string~}\+NPC}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for the \doxylink{class_n_p_c}{NPC} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_n_p_c_acde128cab912144027191951902e1adc}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_n_p_c_a7c45f863c3cb2f47d76d6fbf3a8e4f55}{get\+Description}} () const
+\begin{DoxyCompactList}\small\item\em Gets the description of the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_n_p_c_aeb3f372f9f330ee684d396e3377701dc}{get\+Dialogue\+Complete}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the dialogue with the \doxylink{class_n_p_c}{NPC} is complete. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_a173b0462695806383e21e14bb4ca4413}{set\+Name}} (std\+::string new\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Sets a new name for the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_a53e90cffc327c015d6cb661265d9800a}{set\+Description}} (std\+::string new\+\_\+description)
+\begin{DoxyCompactList}\small\item\em Sets a new description for the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_ab394d9dcce442be67b308de688d6fd97}{set\+Dialogue\+Complete}} (bool new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Sets the dialogue completion status of the \doxylink{class_n_p_c}{NPC}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_n_p_c_ad73dc8dfb4b976286349f80653d2d9d0}{get\+X\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Gets the X-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_n_p_c_ab36f7434d9b072f6d5fd01289c993360}{get\+Y\+\_\+pos}} () const
+\begin{DoxyCompactList}\small\item\em Gets the Y-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_a54ba6c7571043f75dcd0b2cf7f01ba92}{set\+X\+\_\+pos}} (int new\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Sets the X-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_n_p_c_a074dd55a6248f3a5723a91fffc14398f}{set\+Y\+\_\+pos}} (int new\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Sets the Y-\/coordinate of the \doxylink{class_n_p_c}{NPC}\textquotesingle{}s position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing the trader \doxylink{class_n_p_c}{NPC} in the game. 
+
+\doxylink{class_trader}{Trader} inherits from the \doxylink{class_n_p_c}{NPC} base class and implements trading functionality, including a store with various amulets that can be purchased by the player. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_trader_a412f3004c97f46f8e0e01edee636b1f4}\index{Trader@{Trader}!Trader@{Trader}}
+\index{Trader@{Trader}!Trader@{Trader}}
+\doxysubsubsection{\texorpdfstring{Trader()}{Trader()}}
+{\footnotesize\ttfamily \label{class_trader_a412f3004c97f46f8e0e01edee636b1f4} 
+Trader\+::\+Trader (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}} \&}]{p}{, }\item[{\mbox{\hyperlink{class_game_field}{Game\+Field}} \&}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{class_trader}{Trader} class. 
+
+Initializes the trader with references to player and game field, and creates all available amulets for sale.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p} & Reference to the player object \\
+\hline
+{\em f} & Reference to the game field \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_trader_a210142ba855587a1ac298ee90f717356}\index{Trader@{Trader}!showStore@{showStore}}
+\index{showStore@{showStore}!Trader@{Trader}}
+\doxysubsubsection{\texorpdfstring{showStore()}{showStore()}}
+{\footnotesize\ttfamily \label{class_trader_a210142ba855587a1ac298ee90f717356} 
+std\+::string Trader\+::show\+Store (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Displays the trader\textquotesingle{}s store interface. 
+
+Generates and returns a formatted string containing information about all available amulets, their costs and slot requirements.
+
+\begin{DoxyReturn}{Returns}
+std\+::string Formatted store interface 
+\end{DoxyReturn}
+\Hypertarget{class_trader_ac513e1eb53bf02d8b48b59d20950cb51}\index{Trader@{Trader}!speak@{speak}}
+\index{speak@{speak}!Trader@{Trader}}
+\doxysubsubsection{\texorpdfstring{speak()}{speak()}}
+{\footnotesize\ttfamily \label{class_trader_ac513e1eb53bf02d8b48b59d20950cb51} 
+void Trader\+::speak (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Initiates dialogue with the trader. 
+
+Overridden method from the \doxylink{class_n_p_c}{NPC} base class. Displays greeting message and shows the store interface. 
+
+Implements \mbox{\hyperlink{class_n_p_c_a7436ea19c35f710a33049f48e6537b6f}{NPC}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/daniillickovaha/\+Documents/\+My\+Game/include/Trader.\+h\end{DoxyCompactItemize}

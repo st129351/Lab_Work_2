@@ -1,0 +1,40 @@
+\doxysection{Inventory.\+h}
+\hypertarget{_inventory_8h_source}{}\label{_inventory_8h_source}\index{/Users/daniillickovaha/Documents/MyGame/include/Inventory.h@{/Users/daniillickovaha/Documents/MyGame/include/Inventory.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//Lichkovaha\ Daniil}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//st129351@student.spbu.ru}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//LabWork2}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#ifndef\ INVENTORY\_H}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ INVENTORY\_H}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <memory>}\ \textcolor{comment}{//\ for\ smart\ ptr}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Forward\ declarations}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_player}{Player}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_amulet}{Amulet}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_inventory_a694f2fbbcb65c3b17e75b487eb45ba7c}{Inventory}}}
+\DoxyCodeLine{00024\ \{}
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ max\_slots\ =\ 25;\ \ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ size;\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{class_player}{Player}}\&\ player;\ }
+\DoxyCodeLine{00029\ \ \ \ \ std::vector<std::shared\_ptr<Amulet>>\ amulets;\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Using\ shared\_ptr\ for\ automatic\ memory\ management.}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{class_inventory_a694f2fbbcb65c3b17e75b487eb45ba7c}{Inventory}}(\mbox{\hyperlink{class_player}{Player}}\&\ p);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00050\ \ \ \ \ std::string\ \mbox{\hyperlink{class_inventory_a932d6d5bbfe7a1674c150864790e4c34}{show}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_inventory_af14efb782bdfbe40b027cd78afa46b61}{add}}(std::shared\_ptr<Amulet>\ item);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_inventory_aa793c3a7dcb824a0d2aabe4706deb041}{getAvailableSlots}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
