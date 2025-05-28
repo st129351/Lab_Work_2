@@ -6,6 +6,8 @@ The main container encompassing all game components and their interactions.
 
 ## GeneralComponents
 
+![diagram component](images/diagram_component.png)
+
 ### Game
 - **Description:** The central component for game management.
 - **Functions:**

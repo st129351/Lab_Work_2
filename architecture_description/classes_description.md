@@ -92,7 +92,7 @@
 - display() - field display
 
 ## Connections between classes
-
+![diagram classes](images/diagram_classes.png)
 1. **Inheritance:**
 - Player → Fighter
    - Enemy → Fighter
