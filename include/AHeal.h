@@ -3,18 +3,21 @@
 
 #include "Amulet.h"
 
+class Player;
+
 class AHeal : public Amulet
 {
 private:
     unsigned int heal_value;
-    const unsigned int slots;
     std::string heal_description;
 public:
-    AHeal(Player& p);
+    AHeal();
     ~AHeal() override;
 
     void use(Player& p) override;
-    
+
+    unsigned int getHealValue() const;
+    void setHealValue(unsigned int new_value);
 };
 
 #endif

@@ -11,7 +11,7 @@ class Amulet;
 class Inventory
 {
 private:
-    const unsigned int max_slots = 20;
+    const unsigned int max_slots = 25;
     unsigned int size;
     Player& player;
 
@@ -25,19 +25,7 @@ public:
 
     std::string show();
 
-    // realisation of template func here
-    template<typename T>
-    void add(std::shared_ptr<T> item);
-
-    template<typename T>
-    void remove(std::shared_ptr<T> item);
-
-    template<typename T>
-    void put_on(size_t index);
-
-    template<typename T>
-    void take_off(size_t index);
-
+    void add(std::shared_ptr<Amulet> item);
 };
 
 #endif

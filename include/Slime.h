@@ -7,6 +7,7 @@
 #include "Enemy.h"
 #include <chrono>
 
+class Player;
 class GameField; // forward declaration
 
 class Slime : public Enemy
@@ -17,7 +18,7 @@ private:
     std::chrono::system_clock::time_point poison_start; // when poison started
     const std::chrono::seconds poison_duration{3}; // how long poison will last
 public:
-    Slime(std::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int poizon_damage);
+    Slime(std::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int exp, Player* player, unsigned int poizon_damage);
     ~Slime() = default;
     void onDeath() override;
 

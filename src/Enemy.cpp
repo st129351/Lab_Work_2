@@ -1,8 +1,12 @@
 #include "Enemy.h"
+#include "GameField.h"
+#include "Player.h"
 
-Enemy::Enemy(std::string name, unsigned int health, unsigned int damage, unsigned int iq) : Fighter(name, health, damage)
+Enemy::Enemy(std::string name, unsigned int health, unsigned int damage, unsigned int iq, unsigned int exp, Player* player) : Fighter(name, health, damage)
 {
     this->iq = iq;
+    this->exp = exp;
+    this->player = player;
 }
 
 std::string Enemy::getEnemyDescription() const
@@ -23,6 +27,26 @@ unsigned int Enemy::getIQ() const
 void Enemy::setIQ(unsigned int new_iq)
 {
     iq = new_iq;
+}
+
+unsigned int Enemy::getExp() const
+{
+    return exp;
+}
+
+void Enemy::setExp(unsigned int new_exp)
+{
+    exp = new_exp;
+}
+
+Player& Enemy::getPlayer()
+{
+    return *player;
+}
+
+void Enemy::setPlayer(Player* new_player)
+{
+    player = new_player;
 }
 
 int Enemy::getX_pos() const
